@@ -1,0 +1,82 @@
+
+.mainInfo{
+    text-align: center;    
+    width: 100%;
+
+}
+.mainInfo h1,
+.mainInfo h2{
+    padding-top:30px;
+    font-size: 40px;
+}
+.mainInfo h4{
+    padding-bottom: 30px;
+}
+.aboutMe{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-gap: 40px;
+    margin:auto 10%;
+
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.687);
+
+    
+
+}
+.myphoto img {
+    max-width: 500px;
+}
+.listOfSkills{
+    
+    text-align: justify;
+}
+.listOfSkills p{
+    padding-bottom: 10px;
+}
+.hiddenService{
+    display: none;
+}
+.service{
+    text-align: left;
+    margin:auto 10%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+    grid-gap: 30px;
+    padding-top: 40px;
+
+}
+
+.visibleService,
+.hiddenService{
+    width: 300px;
+    height: 400px;
+    background-color: green;
+}
+
+@media all and (max-width:1200px){
+    .aboutMe{
+        grid-template-columns: auto;
+        /* margin:auto 28%; */
+    
+    }
+    .service{
+        grid-template-columns: auto auto;
+    }
+    .listOfSkills{
+        text-align: justify;
+    }
+     
+}
+@media all and (max-width:960px){
+    .visibleService{
+        display:none;
+    }
+    .hiddenService{
+        display: block;
+    }
+    .service{
+        justify-content: center;
+    }
+}
