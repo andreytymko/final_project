@@ -1,0 +1,692 @@
+.container-item{
+    width: 100%;
+    padding: 0 2%;
+}
+.item{
+    width: 100%;
+    height: auto;  
+
+}
+.item-header {
+    text-align: left;
+    padding-top: 40px;
+
+}
+.item-header h1{
+    padding-bottom: 15px;
+}
+.newyear-photo-1{
+    width: 100%;
+    height: 400px;
+    background-image: url(/images/newyear1.jpg);
+    background-size: cover;
+    grid-area: floor1-3x;
+    }
+.newyear-photo-2{
+    grid-area: floor2-2x;
+    background-image: url(/images/newyear2.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+.newyear-photo-3{
+    grid-area: floor2-1x;
+    background-image: url(/images/newyear3.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    
+}
+.newyear-photo-4{
+    grid-area: floor3-1x;
+    background-image: url(/images/newyear4.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+
+}
+.newyear-photo-5{
+    grid-area: floor3-2x;
+    background-image: url(/images/newyear5.jpg);
+    background-size: cover;
+    height: 400px;
+
+}
+.newyear-photo-6{
+    grid-area: floor4-11x;
+    background-image: url(/images/newyear6.jpg);
+    background-size: cover;
+    height: 400px;
+    
+}
+.newyear-photo-7{
+    grid-area: floor4-12x;
+    background-image: url(/images/newyear7.jpg);
+    background-size: cover;
+    height: 400px;
+
+}
+.newyear-photo-8{
+    grid-area: floor4-13x;
+    background-image: url(/images/newyear8.jpg);
+    background-size: cover;
+    height: 400px;
+
+}
+
+.newyear-photo{
+    padding-top: 30px;
+    display: grid;
+    grid-template-areas: 
+    'floor1-3x floor1-3x floor1-3x'
+    'floor2-2x floor2-2x floor2-1x'
+    'floor3-1x floor3-2x floor3-2x'
+    'floor4-11x floor4-12x floor4-13x' ;
+    grid-gap: 10px;
+
+}
+.item-text{
+    text-align: left;
+}
+.item-text h2{
+    padding: 20px 0;
+}
+.item-text ul,
+.item-text ol
+{
+    padding: 10px;
+    padding-left: 20px;
+}
+.item-text li{
+    padding: 5px 0;
+}
+.item-price{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+.price{
+    width: 450px;
+    height: 600px;
+    background-color: rgb(235, 222, 222);
+    border: 1px solid pink;
+    border-radius: 10px;
+    
+}
+.price-newyear-img{
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.price-econom .price-newyear-img{
+    background-image: url(/images/price-newyear.jpg);
+    background-size: cover;
+}
+.price-vip .price-newyear-img{
+ 
+    background-image: url(/images/price-newyear2.jpg);
+    background-size: cover;
+
+}
+.price-list ul{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+
+}
+.price-list li{
+    
+    list-style-type: none;
+    height: 45px;
+    border-bottom: 1px solid pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        
+}
+.price-header{
+    font-size: 27px;
+    color: rgb(221, 45, 45);
+}
+.price-price{
+    font-size: 20px;
+    color: rgb(221, 45, 45);
+}
+.booking{
+    text-align: center;
+    padding-top: 10px;    
+}
+.booking input{
+    width: 220px;
+    height: 50px;
+    background-color :rgb(221, 45, 45);
+    border: 0px;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+}
+.booking input:hover{
+    background-color: #111111;
+    transition: all linear .3s ;
+    cursor: pointer;
+}
+/* family */
+.family-photo-1{
+    width: 100%;
+    height: 400px;
+    background-image: url(/images/family1.jpg);
+    background-size: cover;
+    grid-area: floor1-3x;
+    }
+.family-photo-2{
+    grid-area: floor2-2x;
+    background-image: url(/images/family2.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+.family-photo-3{
+    grid-area: floor2-1x;
+    background-image: url(/images/family3.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    
+}
+.family-photo-4{
+    grid-area: floor3-1x;
+    background-image: url(/images/family4.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+
+}
+.family-photo-5{
+    grid-area: floor3-2x;
+    background-image: url(/images/family5.jpg);
+    background-size: cover;
+    height: 400px;
+
+}
+.family-photo-6{
+    grid-area: floor4-11x;
+    background-image: url(/images/family6.jpg);
+    background-size: cover;
+    height: 400px;
+    
+}
+.family-photo-7{
+    grid-area: floor4-12x;
+    background-image: url(/images/family7.jpg);
+    background-size: cover;
+    height: 400px;
+
+}
+.family-photo-8{
+    grid-area: floor4-13x;
+    background-image: url(/images/family8.jpg);
+    background-size: cover;
+    height: 400px;
+
+}
+
+.family-photo{
+    padding-top: 30px;
+    display: grid;
+    grid-template-areas: 
+    'floor1-3x floor1-3x floor1-3x'
+    'floor2-2x floor2-2x floor2-1x'
+    'floor3-1x floor3-2x floor3-2x'
+    'floor4-11x floor4-12x floor4-13x' ;
+    grid-gap: 10px;
+
+}
+
+
+
+
+
+
+
+.price-family-img{
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.price-econom .price-family-img{
+    background-image: url(/images/family-price.jpg);
+    background-size: cover;
+}
+.price-vip .price-family-img{
+    background-image: url(/images/family-price2.jpg);
+    background-size: cover;
+}
+
+/* wedding */
+.wedding-photo-1{
+    width: 100%;
+    height: 400px;
+    background-image: url(/images/wedding1.jpg);
+    background-size: cover;
+    grid-area: floor1-3x;
+    }
+.wedding-photo-2{
+    grid-area: floor2-2x;
+    background-image: url(/images/wedding2.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+.wedding-photo-3{
+    grid-area: floor2-1x;
+    background-image: url(/images/wedding3.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    
+}
+.wedding-photo-4{
+    grid-area: floor3-1x;
+    background-image: url(/images/wedding4.png);
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+
+}
+.wedding-photo-5{
+    grid-area: floor3-2x;
+    background-image: url(/images/wedding5.jpg);
+    background-size: cover;
+    height: 400px;
+
+}
+.wedding-photo-6{
+    grid-area: floor4-11x;
+    background-image: url(/images/wedding6.jpg);
+    background-size: cover;
+    height: 400px;
+    
+}
+.wedding-photo-7{
+    grid-area: floor4-12x;
+    background-image: url(/images/wedding7.jpg);
+    background-size: cover;
+    height: 400px;
+
+}
+.wedding-photo-8{
+    grid-area: floor4-13x;
+    background-image: url(/images/wedding8.jpg);
+    background-size: cover;
+    height: 400px;
+
+}
+
+.wedding-photo{
+    padding-top: 30px;
+    display: grid;
+    grid-template-areas: 
+    'floor1-3x floor1-3x floor1-3x'
+    'floor2-2x floor2-2x floor2-1x'
+    'floor3-1x floor3-2x floor3-2x'
+    'floor4-11x floor4-12x floor4-13x' ;
+    grid-gap: 10px;
+
+}
+
+
+
+
+
+
+
+.price-wedding-img{
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.price-econom .price-wedding-img{
+    background-image: url(/images/wedding-price1.jpg);
+    background-size: cover;
+}
+.price-vip .price-wedding-img{
+    background-image: url(/images/wedding-price2.jpg);
+    background-size: cover;
+}
+/* love */
+.love-photo-1{
+    width: 100%;
+    height: 400px;
+    background-image: url(/images/love1.jpg);
+    background-size: cover;
+    grid-area: floor1-3x;
+    }
+.love-photo-2{
+    grid-area: floor2-2x;
+    background-image: url(/images/love2.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+}
+.love-photo-3{
+    grid-area: floor2-1x;
+    background-image: url(/images/love3.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    
+}
+.love-photo-4{
+    grid-area: floor3-1x;
+    background-image: url(/images/love4.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+
+}
+.love-photo-5{
+    grid-area: floor3-2x;
+    background-image: url(/images/love5.jpg);
+    background-size: cover;
+    height: 400px;
+
+}
+.love-photo-6{
+    grid-area: floor4-11x;
+    background-image: url(/images/love6.jpg);
+    background-size: cover;
+    height: 400px;
+    
+}
+.love-photo-7{
+    grid-area: floor4-12x;
+    background-image: url(/images/love7.jpg);
+    background-size: cover;
+    height: 400px;
+
+}
+.love-photo-8{
+    grid-area: floor4-13x;
+    background-image: url(/images/love8.jpg);
+    background-size: cover;
+    height: 400px;
+
+}
+
+.love-photo{
+    padding-top: 30px;
+    display: grid;
+    grid-template-areas: 
+    'floor1-3x floor1-3x floor1-3x'
+    'floor2-2x floor2-2x floor2-1x'
+    'floor3-1x floor3-2x floor3-2x'
+    'floor4-11x floor4-12x floor4-13x' ;
+    grid-gap: 10px;
+
+}
+
+
+
+
+
+
+
+.price-love-img{
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.price-econom .price-love-img{
+    background-image: url(/images/love-price1.jpg);
+    background-size: cover;
+}
+.price-vip .price-love-img{
+    background-image: url(/images/love-price2.jpg);
+    background-size: cover;
+}
+/* master */
+.master-photo{
+    display: none;
+}
+.master-photo1{
+    margin-top: 50px;
+    width: 100%;
+    height: 600px;
+    background-image: url(/images/master.jpg);
+    background-size: cover;
+}
+.master-price{
+justify-content: center;}
+.price-master-img{
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.price-econom .price-master-img{
+    background-image: url(/images/master-price.jpeg);
+    background-size: cover;
+}
+
+
+
+
+@media all and (max-width:1000px){
+    .container-item{
+        padding: 0 5%;
+    }
+    .item-price{
+        grid-template-columns: auto;
+        justify-content: center;
+        grid-gap: 30px;
+
+    }
+    .price{
+        padding-bottom: 30px;
+    }
+    .love-photo,
+    .family-photo,
+    .master-photo,
+    .newyear-photo,
+    .wedding-photo{
+        justify-content: center;
+        grid-gap: 5px;
+    }
+    .image-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .master-photo1{
+        max-width: 600px;
+        max-height: 300px;
+    }
+    .love-photo-1,
+    .family-photo-1,
+    .newyear-photo-1,
+    .wedding-photo-1{
+        width: 610px;
+        height: 200px;
+
+        }
+    .love-photo-2,
+    .family-photo-2,
+    .newyear-photo-2,
+    .wedding-photo-2{
+        width: 400px;
+        height: 200px;
+    }
+    .love-photo-3,
+    .family-photo-3,
+    .newyear-photo-3,
+    .wedding-photo-3{
+
+        width: 200px;
+        height: 200px;
+        
+    }
+    .love-photo-4,
+    .family-photo-4,
+    .newyear-photo-4,
+    .wedding-photo-4{
+
+        width: 200px;
+        height: 200px;
+    
+    }
+    .love-photo-5,
+    .family-photo-5,
+    .newyear-photo-5,
+    .wedding-photo-5{
+
+        width: 405px;
+        height: 200px;
+    
+    }
+    .love-photo-6,
+    .family-photo-6,
+    .newyear-photo-6,
+    .wedding-photo-6{
+
+        width: 200px;
+        height: 200px;
+        
+    }
+    .love-photo-7,
+    .family-photo-7,
+    .newyear-photo-7,
+    .wedding-photo-7{
+        width: 200px;
+        height: 200px;
+    
+    }
+    .love-photo-8,
+    .family-photo-8,
+    .newyear-photo-8,
+    .wedding-photo-8{
+
+        width: 200px;
+        height: 200px;
+    
+    }
+    
+}
+@media all and (max-width:670px){
+    .container-item{
+        padding: 0 5%;
+    }
+    .item-price{
+        grid-template-columns: auto;
+        justify-content: center;
+        grid-gap: 30px;
+
+    }
+    .price{
+        width: 300px;
+        padding-bottom: 30px;
+    }
+    .master-photo1{
+        max-width: 300px;
+        max-height: 150px;
+    }
+    .price-newyear-img,
+    .price-family-img,
+    .price-wedding-img,
+    .price-love-img,
+    .price-master-img{
+        width: 300px;
+        height: 150px;
+        text-align: center;
+    }
+    .love-photo,
+    .family-photo,
+    .master-photo,
+    .newyear-photo,
+    .wedding-photo{
+        justify-content: center;
+        grid-gap: 5px;
+    }
+    .love-photo-1,
+    .family-photo-1,
+    .newyear-photo-1,
+    .wedding-photo-1{
+        width: 310px;
+        height: 100px;
+
+        }
+    .love-photo-2,
+    .family-photo-2,
+    .newyear-photo-2,
+    .wedding-photo-2{
+        width: 200px;
+        height: 100px;
+    }
+    .love-photo-3,
+    .family-photo-3,
+    .newyear-photo-3,
+    .wedding-photo-3{
+
+        width: 100px;
+        height: 100px;
+        
+    }
+    .love-photo-4,
+    .family-photo-4,
+    .newyear-photo-4,
+    .wedding-photo-4{
+
+        width: 100px;
+        height: 100px;
+    
+    }
+    .love-photo-5,
+    .family-photo-5,
+    .newyear-photo-5,
+    .wedding-photo-5{
+
+        width: 205px;
+        height: 100px;
+    
+    }
+    .love-photo-6,
+    .family-photo-6,
+    .newyear-photo-6,
+    .wedding-photo-6{
+
+        width: 100px;
+        height: 100px;
+        
+    }
+    .love-photo-7,
+    .family-photo-7,
+    .newyear-photo-7,
+    .wedding-photo-7{
+        width: 100px;
+        height:100px;
+    
+    }
+    .love-photo-8,
+    .family-photo-8,
+    .newyear-photo-8,
+    .wedding-photo-8{
+
+        width: 100px;
+        height: 100px;
+    
+    }
+    .price-price{
+        font-family: 14px;
+    }
+    .price{
+        font-size: 12px;
+        font-weight: bold;
+    }
+    
+}
+
+

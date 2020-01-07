@@ -1,4 +1,5 @@
 window.onload = (function() {
+  
 // slider
     var slider = function() {
     var names = ['images/slider0.jpg','images/slider1.jpg','images/slider2.jpg','images/slider3.jpg','images/slider4.jpg'];
@@ -75,3 +76,60 @@ $(this).toggleClass("active");
 //     let nav = document.getElementsByTagName('nav');
 //     nav.style.display = 'block';
 // }
+
+
+
+// geoposition
+function initMap(){
+  // let pos = {lat: 50.426125, lng:30.519085};
+  
+let opt ={
+  center:{lat: 50.448178, lng:30.516224},
+  zoom:12
+  }
+let myMap = new google.maps.Map(document.getElementById('map'), opt)
+
+addMarker({
+  coordinates: {lat: 50.426125, lng:30.519085},
+  image:'/images/icon-camera.png',
+  info:'<h1>Hello</h1>'
+});
+addMarker({
+  coordinates: {lat: 50.444287, lng:30.452845},
+  image:'/images/icon-camera.png',
+  info:'<h1>Hello</h1>'
+});
+addMarker({
+  coordinates: {lat: 50.467583, lng:30.500888},
+  image:'/images/icon-camera.png',
+  info:'<h1>Hello</h1>'
+});
+addMarker({
+  coordinates: {lat: 50.459674, lng: 30.613798},
+  image:'/images/icon-camera.png',
+  info:'<h1>Hello</h1>'
+});
+function addMarker(properties){
+  let marker = new google.maps.Marker({
+    position: properties.coordinates,
+    title: 'Нажми чтобы узнать подробнее',
+    map: myMap,
+    icon:properties.image 
+});
+
+if(properties.image){
+      marker.setIcon(properties.image)
+}
+
+if(properties.info){
+  let infoWindow = new google.maps.InfoWindow({
+  content:properties.info
+  });
+
+  marker.addListener('click',function(){
+  infoWindow.open(myMap,marker);
+  });
+  }
+  }
+};
+//

@@ -1,82 +1,446 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+  }
 
+.main-head-photo{
+    display: none;
+    min-width: 100%;
+    height: 500px;
+    background-image: url(/images/mainphoto.jpg);
+    background-size: cover;
+    
+}
+
+/* .headOfBlock{
+    padding: 10px 0;
+    border-bottom: 2px solid rgba(0,0,0,.05); 
+    text-align: center;
+}
+.headOfBlock h2{
+    font-size: 20px;
+    letter-spacing: 1px;
+    max-width: 0px;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    color: #465457;
+}
+.headOfBlock h2::before{
+    content: "";
+    position: absolute;
+    top: 42px;
+    left:0;
+    right: 300px;
+    height: 6px;
+    
+    border-top: 2px solid #BBC9C9;
+    border-bottom: 2px solid #BBC9C9;
+}
+.headOfBlock span{
+    background: rgb(255, 255, 255);
+    padding: 0 20px;
+} */
 .mainInfo{
     text-align: center;    
     width: 100%;
-
+    padding: 0 10%;
 }
-.mainInfo h1,
-.mainInfo h2{
+.mainInfo h1{
     padding-top:30px;
     font-size: 40px;
 }
+.mainInfo h2{
+    font-size: 25px;
+    padding: 30px 0;
+}
 .mainInfo h4{
     padding-bottom: 30px;
+    
 }
 .aboutMe{
     display: grid;
     grid-template-columns: 1fr 1fr ;
     grid-gap: 40px;
-    margin:auto 10%;
-
+    /* margin:auto 10%; */
+    /* padding:0 10%; */
     padding-bottom: 40px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.687);
 
     
 
 }
+
 .myphoto img {
     max-width: 500px;
 }
 .listOfSkills{
-    
     text-align: justify;
 }
 .listOfSkills p{
     padding-bottom: 10px;
 }
-.hiddenService{
-    display: none;
+.main_service{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    /* margin: auto 10%; */
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.687);
+
 }
 .service{
-    text-align: left;
-    margin:auto 10%;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: space-around;
-    grid-gap: 30px;
-    padding-top: 40px;
-
-}
-
-.visibleService,
-.hiddenService{
     width: 300px;
-    height: 400px;
-    background-color: green;
+    height: 200px;
+    cursor: pointer;
+}
+.service1{
+    background-image: url(/images/main_portfolio/family.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.service2{
+    background-image: url(/images/main_portfolio/wedding2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.service3{
+    background-image: url(/images/main_portfolio/newyear.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.service4{
+    background-image: url(/images/main_portfolio/wedding3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.service5{
+    background-image: url(/images/main_portfolio/wedding.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.service6{
+    background-image: url(/images/main_portfolio/love.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.service7{
+    background-image: url(/images/main_portfolio/portrai.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.service8{
+    background-image: url(/images/main_portfolio/love2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.service:hover{
+    
+    background:rgba(78, 168, 233, 0.503);
+    transition: linear .2s ;
+    
+    
 }
 
+.service2:hover::after,
+.service4:hover::after,
+.service5:hover::after{
+    content: 'Wedding';
+    font-size: 25px;
+    font-weight:bold;
+    position: relative;
+    top: 40%;
+    color:white ;
+}
+.service6:hover::after,
+.service8:hover::after{
+    content: 'Love Story';
+    font-size: 25px;
+    font-weight:bold;
+    position: relative;
+    top: 40%;
+    color:white ;
+}
+.service1:hover::after{
+    content: 'Family';
+    font-size: 25px;
+    font-weight:bold;
+    position: relative;
+    top: 40%;
+    color:white ;
+}
+.service3:hover::after{
+    content: 'New Year';
+    font-size: 25px;
+    font-weight:bold;
+    position: relative;
+    top: 40%;
+    color:white ;
+}
+.service7:hover::after{
+    content: 'Personal';
+    font-size: 25px;
+    font-weight:bold;
+    position: relative;
+    top: 40%;
+    color:white ;
+}
+.cooperation{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    /* background-image: url(/images/workwithme.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;  */
+    /* margin: auto 10%; */
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.687);
+}
+
+.cooperation_img{
+    width: 620px;
+    height: 600px;
+    background-image: url(/images/workwithme.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.adv_container{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    padding-bottom: 40px;
+
+}
+.whyme{
+    /* width: 700px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    justify-content: center;
+
+}
+
+.adv{
+    width:400px ;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(175, 179, 187, 0.25);
+    border-radius: 10px 10px 0 0;
+
+}
+
+
+.adv-img1{
+    width: 360px;
+    height: 240px;
+    background-image: url(/images/adv1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.adv-img2{
+    width: 360px;
+    height: 240px;
+    background-image: url(/images/adv2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.adv-img3{
+    width: 360px;
+    height: 240px;
+    background-image: url(/images/adv3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.footer-desktop{
+    border-top: 1px solid rgba(0, 0, 0, 0.687);
+    background-color: rgba(22, 20, 20, 0.898);
+    color: white;
+    height: 200px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr  1fr 1fr 1fr;
+    justify-content: center;
+    /* color: rgba(22, 20, 20, 0.898); */
+
+}
+
+.footer-menu {
+    text-align: center;
+    padding:10px 0;
+}
+
+
+.footer-menu ul{
+    display: flex;
+    
+}
+.footer-menu li{
+    list-style-type: none;
+    padding: 0 10px;
+    font-size: 20px;
+
+}
+
+.footer-number{
+    text-align: center;
+}
+.footer-number a{
+    font-size: 20px;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.footer-social div{
+
+    padding: 10px;
+}
+
+.footer-social a{
+    display: block;
+}
+
+.footer-social a:hover{
+    transform: scale(1.2);
+}
+
+.footer-author{
+    text-align: center;
+}
+
+.footer-author h6{
+    color: rgba(255, 255, 255, 0.673);
+}
+
+
+
+@media all and (max-width:1500px){
+    .main_service{
+        grid-template-columns: auto auto;
+    }
+}
+@media all and (max-width:1400px){
+    .adv{
+        width: 300px;
+        height: 300px;
+    }
+    .adv-img1{
+        width: 280px;
+        height: 187px;
+    }
+    .adv-img2{
+        width: 280px;
+        height: 187px;
+    }
+    .adv-img3{
+        width: 280px;
+        height: 187px;
+    }
+
+}
 @media all and (max-width:1200px){
     .aboutMe{
         grid-template-columns: auto;
-        /* margin:auto 28%; */
+        /* margin:auto 28%;  */
     
     }
-    .service{
-        grid-template-columns: auto auto;
-    }
+    
     .listOfSkills{
         text-align: justify;
     }
      
 }
 @media all and (max-width:960px){
-    .visibleService{
-        display:none;
-    }
-    .hiddenService{
+    .main-head-photo{
         display: block;
     }
+    
+    .whyme{
+        grid-template-columns: auto ;
+    }
+    .adv{
+        width: 280px;
+        height: 280px;
+    }
+    .adv-img1{
+        width: 280px;
+        height: 187px;
+    }
+    .adv-img2{
+        width: 280px;
+        height: 187px;
+    }
+    .adv-img3{
+        width: 280px;
+        height: 187px;
+    }
+}
+
+@media all and (max-width:760px){
+    .main-head-photo{
+        display: none;
+    }
     .service{
-        justify-content: center;
+        width: 200px;
+        height: 150px;
+    }
+    .cooperation{
+        height: 470px;
+    }
+    .cooperation_img{
+        width: 470px;
+        height: 460px;
+    }
+    .footer-menu li{
+        font-size: 10px;
+    }
+    .mainInfo{
+        padding-top: 90px;
+    }
+    /* .whyme{
+        grid-template-columns: auto;
+        width: 200px;
+        height: auto;
+
+        grid-gap: 0px;
+    } */
+}
+
+@media all and (max-width:600px){
+    .myphoto img {
+        width: 300px;
+    }
+    .cooperation{
+        display: none;
+    }
+    .remove{
+        display: none;
+    }
+    
+}
+
+@media all and (max-width:450px){
+    /* .listOfSkills{
+        width: 250px;
+    } */
+    .myphoto img {
+        width: 250px;
+    }
+    .service{
+        width: 140px;
+        height: 90px;
+    }
+    .logo a{
+        font-size: 25px;
     }
 }

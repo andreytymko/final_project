@@ -1,4 +1,14 @@
+$("#menu-icon").on("click", function(){
+	$("nav").slideToggle();
+	$(this).toggleClass("active");
+	});
+	
+
+
+
+
 var input,search,pr,result,result_arr, locale_HTML, result_store;
+
 
 function func() {
  	locale_HTML = document.body.innerHTML;   // сохраняем в переменную весь body (Первоначальный)
@@ -11,7 +21,7 @@ function FindOnPage(name, status) {
 	
 	if(input.length<3&&status==true)
 	{
-		alert('Для поиска вы должны ввести три или более символов');
+		// alert('Для поиска вы должны ввести три или более символов');
 		function FindOnPageBack() { document.body.innerHTML = locale_HTML; }
 	}
 	
@@ -31,7 +41,7 @@ function FindOnPage(name, status) {
 				}
 			}
 			if(warning == true) {
-				alert('Не найдено ни одного совпадения');
+				// error.textContent = 'найдено ни одного совпадения';
 			}
 
 			for(var i=0; i<result.length;i++) {
@@ -47,3 +57,6 @@ function FindOnPage(name, status) {
 	if(status) { FindOnPageBack(); FindOnPageGo(); } //чистим прошлое и Выделяем найденное
 	if(!status) { FindOnPageBack(); } //Снимаем выделение
 }
+
+
+// 

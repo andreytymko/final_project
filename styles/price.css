@@ -1,0 +1,49 @@
+.container h1{
+    padding-bottom: 20px;
+}
+.price-note{
+    text-align: left;
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+
+.item-price{
+    padding-top: 20px;
+}
+sup{
+    color: red;
+}
+.price-note li{
+    list-style-type: none;
+    font-size: 15px;
+}
+.price-note span{
+    color: red;
+}
+.price-party-img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 450px;
+    height: 200px;
+    background-image: url(/images/party.jpg);
+    background-size: cover;
+}
+.price-birthday-img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 450px;
+    height: 200px;
+    background-image: url(/images/birthday.jpg);
+    background-size: cover;
+}
+.date-packet{
+    font-size: 13px;
+}
+
+@media all and (max-width:670px){
+    .price-party-img,
+    .price-birthday-img{
+        width: 300px;
+        height: 150px;
+    }
+}

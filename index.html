@@ -7,145 +7,223 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Blog</title>
     <link rel="stylesheet" href="styles/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 </head>
 <body>
-  
-  <div class="header">
-    <div id="menu-icon">
-      <span class="first"></span>
-      <span class="second"></span>
-      <span class="third"></span>
-    </div>
-    <div class="logo">
-      <a href="#">Dariya Kirilenko</a>
-    </div>  
-    <nav>
-      <form class="search" action="search.js"> 
-        <input class="place_for_search" type="text" id="text-to-find" value="" placeholder="Search" autofocus> 
-        <input class="button_for_turn_back" type="button" onclick="javascript: FindOnPage('text-to-find',false); return false;" value=" " title="Отменить поиск">
-        <input class="button_for_search" type="submit" onclick="javascript: FindOnPage('text-to-find',true); return false;" value=" " title="Начать поиск">
-      </form>
-      <ul>
-        <li class="dropdown">
-          <a href="">Услуги</a>
-          <ul>
-            <li><a href="#">Новогодняя фотосессия</a></li>
-            <li><a href="#">Свадебная фотосессия</a></li> 
-            <li><a href="#">Семейная фотосессия</a></li>
-            <li><a href="#">Love story фотосессия</a></li> 
-            <li><a href="#">Портретная фотосессия</a></li> 
-            <li><a href="#">Детская фотосессия</a></li> 
+<header>
 
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="">Цены</a>
-            <ul >
-              <li><a href="#">About</a></li>
-              <li><a href="#">About</a></li> 
-            </ul> 
-          </li>  
-          <li class="dropdown">
-            <a href="">Блог</a>
-            <ul>
-              <li><a href="#">About Version</a></li>
-              <li><a href="#">About Version</a></li> 
-            </ul>        
-          </li>
-          <li>
-            <a href="">Портфолио</a>
-          </li>
-          <li>
-            <a href="">Контаткты</a>
-          </li>
-        </ul>
-    </nav>
+<!-- navigation -->
+<div class="header">
+  <div id="menu-icon">
+    <span class="first"></span>
+    <span class="second"></span>
+    <span class="third"></span>
   </div>
+  <div class="logo">
+    <a href="index.html">Dariya Kirilenko</a>
+  </div>  
+  <nav>
+    <p id="error1">Для поиска вы должны ввести три или более символов</p>
+    <p id="error2">найдено ни одного совпадения</p>
+    <form class="search" action="search.js"> 
+      <input class="place_for_search" type="text" id="text-to-find" value="" placeholder="Search" autofocus> 
+      <input class="button_for_turn_back" type="button" onclick="javascript: FindOnPage('text-to-find',false); return false;" value=" " title="Отменить поиск">
+      <input class="button_for_search" type="submit" onclick="javascript: FindOnPage('text-to-find',true); return false;" value=" " title="Начать поиск">
+    </form>
+    <ul>
+      <li class="dropdown">
+        <a href="service.html" target="_self">Услуги</a>
+        <ul>
+          <li><a href="/service-newyear.html">Новогодняя фотосессия</a></li>
+          <li><a href="/service-wedding.html">Свадебная фотосессия</a></li> 
+          <li><a href="/service-family.html">Семейная фотосессия</a></li>
+          <li><a href="/service-love.html">Love story фотосессия</a></li> 
+          <li><a href="/service-master.html">Мастер класс</a></li> 
 
-  <header class="intro">
-    <div class="slider">
-      <div class="btnLeft"></div>
-      <div class="btnRight"></div>
-      <div class="info"></div>
-      <div class="hidden images">
-      <img src="/images/slider0.jpg" class="sliderImages">
-      <img src="/images/slider1.jpg " class="sliderImages"> 
-      <img src="/images/slider2.jpg" class="sliderImages">
-      <img src="/images/slider3.jpg" class="sliderImages">
-      <img src="/images/slider4.jpg" class="sliderImages">
-    </div>
-    </div>
-    <div class="mobileBackImg"></div>
-    <div class="headertext">
-      <!-- <h1 >Dariya Kirilenko</h1>
-      <p>It's all about me</p> -->
-    </div>
-  </header>
-  
-    <div class="mainInfo"> 
-      <h1> Фотограф Дария Кириленко</h1>
-      <h4>Эмоциональные и живые фотографии премиум уровня</h4>
-      <div class="aboutMe">
-        
-        <div class="myphoto"><img src="/images/KirilenkoDaria.jpg" alt=""></div>
-        <div class="listOfSkills">
-          <p>Здравствуйте! Меня зовут Дария Кириленко, я — профессиональный фотограф, Киев — мой родной город, в котором я живу и занимаюсь любимым делом. Фотография — не только правильно выставленный свет и цвет, удачно составленная композиция или подобранная поза. Это истинное произведение искусства, рождающее единое целое. То, что непроизвольно заставляет возвращаться к снимку снова и снова, смотреть на него и постоянно находить что-то новое, очень личное. Если мои фото, заставляют чувствовать и заново переживать, задевают невидимые струны души, значит, моя работа была проделана не зря и я действительно — профессиональный фотограф.</p>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a href="price.html" target="_self">Цены</a>
+          <ul >
+            <li><a href="#">Фотосессия</a></li>
+            <li><a href="#">Мастер класс</a></li> 
+          </ul> 
+      </li>  
+      <li class="dropdown">
+          <a href="blog.html" target="_self">Блог</a>
+          <ul>
+            <li><a href="#">About Version</a></li>
+            <li><a href="#">About Version</a></li> 
+          </ul>        
+      </li>
+      <li>
+          <a href="portfolio.html" target="_self">Портфолио</a>
+      </li>
+      <li>
+          <a href="contact.html" target="_self">Контаткты</a>
+      </li>
+    </ul>
+     
+  </nav>
+</div>
 
-          <p>  Я, как профессиональный фотограф в Киеве, способна создать высокохудожественные творческие фотографии, которые оставят неизгладимые впечатления в памяти зрителей и действующих лиц. Меняя геометрию рисунка, стилистическую обработку снимков, подбирая необычные сюжеты, можно прочно связать между собой мир фото и живописи.</p>
+<!-- slider -->
+<div class="intro">
+  <div class="slider">
+    <div class="btnLeft"></div>
+    <div class="btnRight"></div>
+    <div class="info"></div>
+    <div class="hidden images">
+    <img src="/images/slider0.jpg" class="sliderImages">
+    <img src="/images/slider1.jpg " class="sliderImages"> 
+    <img src="/images/slider2.jpg" class="sliderImages">
+    <img src="/images/slider3.jpg" class="sliderImages">
+    <img src="/images/slider4.jpg" class="sliderImages">
+  </div>
+  </div>
+  <div class="mobileBackImg"></div>
+  <div class="headertext">
+    <!-- <h1 >Dariya Kirilenko</h1>
+    <p>It's all about me</p> -->
+  </div>
+</div>
+
+</header>
+
+<div class="main-head-photo">
+</div>
+
+  <div class="mainInfo"> 
+    <h1> Фотограф Дария Кириленко</h1>
+    <h4>Эмоциональные и живые фотографии премиум уровня</h4>
+    <div class="aboutMe">
+       
+      <div class="myphoto"><img src="/images/KirilenkoDaria.jpg" alt=""></div>
+      <div class="listOfSkills">
+        <p>Здравствуйте! Меня зовут Дария Кириленко, я — профессиональный фотограф, Киев — мой родной город, в котором я живу и занимаюсь любимым делом. Фотография — не только правильно выставленный свет и цвет, удачно составленная композиция или подобранная поза. Это истинное произведение искусства, рождающее единое целое. То, что непроизвольно заставляет возвращаться к снимку снова и снова, смотреть на него и постоянно находить что-то новое, очень личное. Если мои фото, заставляют чувствовать и заново переживать, задевают невидимые струны души, значит, моя работа была проделана не зря и я действительно — профессиональный фотограф.</p>
+        <p>  Я, как профессиональный фотограф в Киеве, способна создать высокохудожественные творческие фотографии, которые оставят неизгладимые впечатления в памяти зрителей и действующих лиц. Меняя геометрию рисунка, стилистическую обработку снимков, подбирая необычные сюжеты, можно прочно связать между собой мир фото и живописи.</p>
         </div>
-        <!-- <div class="information">
-          <img src="/images/camera.png" alt="">
-          <p> Портретная съемка всегда востребована среди людей разной возрастной категории. Объясняется это, в первую очередь, желанием иметь красивую фотографию своего лица, на долгие годы сохраняющую в памяти определенный период жизни. </p>
-          
-          <p> <img src="/images/heart.png" alt="">Красивую и неповторимую историю любви поможет сохранить на долгие годы креативная фотосессия лав стори. Нет ничего прекраснее, чем взгляды по-настоящему любящих людей. Запечатлеть свои отношения, эмоции и искренние чувства им позволит фотосессия в стиле лав стори, которая всегда будет напоминать паре о сокровенных моментах зарождения их истории любви. </p>
-                  
-          <p> <img src="/images/family.png" alt="">Семейная фотосессия позволит сохранить на долгие годы интересные и трогательные моменты, окунуться в мир приятных воспоминаний, показать тепло и счастье семейной идиллии.«Живые» портреты с родителями, детьми, бабушками, дедушками и другими членами семьи, выполненные мастером своего дела, станут настоящими реликвиями.  </p>
-        </div> -->
-      </div>
-      <h2>Услуги</h2>
-
-      <div class="service">
-        <div class="hiddenService">
-          <img src="/images/camera.png" alt="">
-          <p> Портретная съемка всегда востребована среди людей разной возрастной категории. Объясняется это, в первую очередь, желанием иметь красивую фотографию своего лица, на долгие годы сохраняющую в памяти определенный период жизни. </p>
-        </div>
-        <div class="visibleService">
+      <!-- <div class="information">
         <img src="/images/camera.png" alt="">
         <p> Портретная съемка всегда востребована среди людей разной возрастной категории. Объясняется это, в первую очередь, желанием иметь красивую фотографию своего лица, на долгие годы сохраняющую в памяти определенный период жизни. </p>
-        </div>
-        <div class="visibleService">
+        
+        <p> <img src="/images/heart.png" alt="">Красивую и неповторимую историю любви поможет сохранить на долгие годы креативная фотосессия лав стори. Нет ничего прекраснее, чем взгляды по-настоящему любящих людей. Запечатлеть свои отношения, эмоции и искренние чувства им позволит фотосессия в стиле лав стори, которая всегда будет напоминать паре о сокровенных моментах зарождения их истории любви. </p>
+                 
+        <p> <img src="/images/family.png" alt="">Семейная фотосессия позволит сохранить на долгие годы интересные и трогательные моменты, окунуться в мир приятных воспоминаний, показать тепло и счастье семейной идиллии.«Живые» портреты с родителями, детьми, бабушками, дедушками и другими членами семьи, выполненные мастером своего дела, станут настоящими реликвиями.  </p>
+      </div> -->
+    </div>
+    <!-- <h2>Услуги</h2>
+    <div class="service">
+      <div class="hiddenService">
+        <img src="/images/camera.png" alt="">
+        <p> Портретная съемка всегда востребована среди людей разной возрастной категории. Объясняется это, в первую очередь, желанием иметь красивую фотографию своего лица, на долгие годы сохраняющую в памяти определенный период жизни. </p>
+      </div>
+      <div class="visibleService">
+      <img src="/images/camera.png" alt="">
+      <p> Портретная съемка всегда востребована среди людей разной возрастной категории. Объясняется это, в первую очередь, желанием иметь красивую фотографию своего лица, на долгие годы сохраняющую в памяти определенный период жизни. </p>
+      </div>
+      <div class="visibleService">
+      <img src="/images/heart.png" alt="">
+      <p> Красивую и неповторимую историю любви поможет сохранить на долгие годы креативная фотосессия лав стори. Нет ничего прекраснее, чем взгляды по-настоящему любящих людей. Запечатлеть свои отношения, эмоции и искренние чувства им позволит фотосессия в стиле лав стори, которая всегда будет напоминать паре о сокровенных моментах зарождения их истории любви. </p>
+      </div>
+      <div class="visibleService">
         <img src="/images/heart.png" alt="">
         <p> Красивую и неповторимую историю любви поможет сохранить на долгие годы креативная фотосессия лав стори. Нет ничего прекраснее, чем взгляды по-настоящему любящих людей. Запечатлеть свои отношения, эмоции и искренние чувства им позволит фотосессия в стиле лав стори, которая всегда будет напоминать паре о сокровенных моментах зарождения их истории любви. </p>
-        </div>
-        <div class="visibleService">
-          <img src="/images/heart.png" alt="">
-          <p> Красивую и неповторимую историю любви поможет сохранить на долгие годы креативная фотосессия лав стори. Нет ничего прекраснее, чем взгляды по-настоящему любящих людей. Запечатлеть свои отношения, эмоции и искренние чувства им позволит фотосессия в стиле лав стори, которая всегда будет напоминать паре о сокровенных моментах зарождения их истории любви. </p>
-        </div>
-        <div class="visibleService">
-          <img src="/images/heart.png" alt="">
-          <p> Красивую и неповторимую историю любви поможет сохранить на долгие годы креативная фотосессия лав стори. Нет ничего прекраснее, чем взгляды по-настоящему любящих людей. Запечатлеть свои отношения, эмоции и искренние чувства им позволит фотосессия в стиле лав стори, которая всегда будет напоминать паре о сокровенных моментах зарождения их истории любви. </p>
-        </div>
-        <div class="visibleService">
-          <img src="/images/heart.png" alt="">
-          <p> Красивую и неповторимую историю любви поможет сохранить на долгие годы креативная фотосессия лав стори. Нет ничего прекраснее, чем взгляды по-настоящему любящих людей. Запечатлеть свои отношения, эмоции и искренние чувства им позволит фотосессия в стиле лав стори, которая всегда будет напоминать паре о сокровенных моментах зарождения их истории любви. </p>
-        </div>
-        <div class="visibleService">
-          <img src="/images/heart.png" alt="">
-          <p> Красивую и неповторимую историю любви поможет сохранить на долгие годы креативная фотосессия лав стори. Нет ничего прекраснее, чем взгляды по-настоящему любящих людей. Запечатлеть свои отношения, эмоции и искренние чувства им позволит фотосессия в стиле лав стори, которая всегда будет напоминать паре о сокровенных моментах зарождения их истории любви. </p>
-        </div>
-      </div> 
-    </div>
+      </div>
+      <div class="visibleService">
+        <img src="/images/heart.png" alt="">
+        <p> Красивую и неповторимую историю любви поможет сохранить на долгие годы креативная фотосессия лав стори. Нет ничего прекраснее, чем взгляды по-настоящему любящих людей. Запечатлеть свои отношения, эмоции и искренние чувства им позволит фотосессия в стиле лав стори, которая всегда будет напоминать паре о сокровенных моментах зарождения их истории любви. </p>
+      </div>
+      <div class="visibleService">
+        <img src="/images/heart.png" alt="">
+        <p> Красивую и неповторимую историю любви поможет сохранить на долгие годы креативная фотосессия лав стори. Нет ничего прекраснее, чем взгляды по-настоящему любящих людей. Запечатлеть свои отношения, эмоции и искренние чувства им позволит фотосессия в стиле лав стори, которая всегда будет напоминать паре о сокровенных моментах зарождения их истории любви. </p>
+      </div>
+      <div class="visibleService">
+        <img src="/images/heart.png" alt="">
+        <p> Красивую и неповторимую историю любви поможет сохранить на долгие годы креативная фотосессия лав стори. Нет ничего прекраснее, чем взгляды по-настоящему любящих людей. Запечатлеть свои отношения, эмоции и искренние чувства им позволит фотосессия в стиле лав стори, которая всегда будет напоминать паре о сокровенных моментах зарождения их истории любви. </p>
+      </div>
+    </div>  -->
+  <h2>Мои Работы</h2>
+  <div class="main_service">
+    <a href="" target="_blank" ><div class="service service1"></div></a> 
+    <a href="" target="_blank" ><div class="service service2"></div></a> 
+    <a href="" target="_blank" ><div class="service service3"></div></a> 
+    <a href="" target="_blank" ><div class="service service4"></div></a> 
+    <a href="" target="_blank" ><div class="service service5"></div></a> 
+    <a href="" target="_blank" ><div class="service service6"></div></a> 
+    <a href="" target="_blank" ><div class="service service7"></div></a> 
+    <a href="" target="_blank" ><div class="service service8"></div></a> 
+     
 
+     
+
+  </div>
+
+  <h2 class="remove">Порядок нашего сотрудничества</h2>
+  <div class="cooperation">
+    <div class="cooperation_img"></div>
+  </div>
+  <h2 >Преимущества работы со мной</h2>
+  <div class="adv_container">
+    <div class="whyme">
+      <div class="adv">
+        <div class="adv-img1">  </div>
+        <h2>Фокус на деталях</h2>
+
+      </div>
+      <div class="adv">
+        <div class="adv-img2">  </div>
+        <h2>Настоящие эмоции</h2>
+
+      </div>
+      <div class="adv">
+        <div class="adv-img3">  </div>
+        <h2>Уникальный стиль</h2>
+      </div>
+      
+    </div>
+   </div>
   
 
 
+  
+  </div>
+
+<footer class="footer-desktop">
+<div class="footer-menu">
+  <ul>
+    <li><a href="/index.html">Главная</a></li>
+    <li><a href="/service.html">Услуги</a></li>
+    <li><a href="/price.html">Цена</a></li>
+    <li><a href="/blog.html">Блог</a></li>
+    <li><a href="/portfolio.html">Портфолио</a></li>
+    <li><a href="/contact.html"> Контакты</a></li>
+  </ul>
+</div>
+<div class="footer-number">
+  <a href="tel:+38(098)7866642" class="tel"> +38(098)786-66-42</a>
+</div>
+<div class="footer-social">
+  <div><a href="#"> <img src='/images/icon_Instagram.png'> </a> </div>
+  <div><a href="#"><img src='/images/icon_Facebook.png'></a> </div>
+  <div><a href="#"><img src='/images/icon_YouTube.png'></a> </div>
+  <div><a href="#"><img src='/images/icon_Twitt.png'></a> </div>
+  <div><a href="#"><img src='/images/icon_Linked (1).png'></a> </div>
+
+</div>
+<div class="footer-author">
+  <h6>Andrii Tymko  2019</h6>
+</div>
+</footer>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="scripts/search.js"></script>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> -->
 
     <script src="scripts/main.js"></script>
 
-    <script src="scripts/search.js"></script>
 
 
 

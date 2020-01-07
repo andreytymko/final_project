@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Цены</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="header">
+        <div id="menu-icon">
+          <span class="first"></span>
+          <span class="second"></span>
+          <span class="third"></span>
+        </div>
+        <div class="logo">
+          <a href="index.html">Dariya Kirilenko</a>
+        </div>  
+        <nav>
+          <p id="error1">Для поиска вы должны ввести три или более символов</p>
+          <p id="error2">найдено ни одного совпадения</p>
+          <form class="search" action="search.js"> 
+            <input class="place_for_search" type="text" id="text-to-find" value="" placeholder="Search" autofocus> 
+            <input class="button_for_turn_back" type="button" onclick="javascript: FindOnPage('text-to-find',false); return false;" value=" " title="Отменить поиск">
+            <input class="button_for_search" type="submit" onclick="javascript: FindOnPage('text-to-find',true); return false;" value=" " title="Начать поиск">
+          </form>
+          <ul>
+            <li class="dropdown">
+              <a href="service.html" target="_self">Услуги</a>
+              <ul>
+                <li><a href="/service-newyear.html">Новогодняя фотосессия</a></li>
+                <li><a href="/service-wedding.html">Свадебная фотосессия</a></li> 
+                <li><a href="/service-family.html">Семейная фотосессия</a></li>
+                <li><a href="/service-love.html">Love story фотосессия</a></li> 
+                <li><a href="/service-mas.html">Мастер класс</a></li> 
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="price.html" target="_self">Цены</a>
+                <ul >
+                  <li><a href="#">Фотосессия</a></li>
+                  <li><a href="#">Мастер класс</a></li> 
+                </ul> 
+              </li>  
+              <li class="dropdown">
+                <a href="blog.html" target="_self">Блог</a>
+                <ul>
+                  <li><a href="#">About Version</a></li>
+                  <li><a href="#">About Version</a></li> 
+                </ul>        
+              </li>
+              <li>
+                <a href="portfolio.html" target="_self">Портфолио</a>
+              </li>
+              <li>
+                <a href="contact.html" target="_self">Контаткты</a>
+              </li>
+          </ul>
+           
+        </nav>
+    </div>
+</header>
+
+<div class="main_photo">
+  <img src="/images/main.jpg" alt="">
+</div>
+<h2 class="main_header"> Цена</h2>
+
+<div class="container">
+  <h1>Стоимость услуг фотографа Дарии Кириленко</h1>
+  <h2>Доступные пакеты<sup>*</sup></h2>
+  <span class="date-packet">01.01.2020 - 31.01.2020</span>
+  <ul class="price-note">
+    <li><span>*</span> если Вы не найдете подходящий для Вас пакет услуг фотографа, можем сформировать тарифы под индивидуальные потребности заказчика.</li>
+  </ul>
+
+  <h2 >Свадебная фотосессия</h2>
+  <div class="item-price">
+    <div class="price price-econom">
+      <div class="price-wedding-img"></div>
+      <div class="price-list">
+        <ul>
+          <li class="price-header">Стандартаная фотосессия</li>
+          <li class="price-price">Стоимость 10000грн</li>
+          <li>Продолжительность: 4 часа</li>
+          <li>Количество обработаных фото:250-300шт.</li>
+          <li>Срок отдачи материала:1 месяц.</li>
+          <li>Консультация фотографа и помощь в создании образов</li>
+          <li>Аренда фотостудии оплачивается отдельно</li>
+        </ul>
+        <div class="booking"><a href="tel:+38(098)786-66-42"><input type="button" value="Заказать "></a></div>
+      </div>
+    </div>
+    <div class="price price-vip">
+      <div class="price-wedding-img"></div>
+      <div class="price-list">
+        <ul>
+          <li class="price-header">VIP фотосессия</li>
+          <li class="price-price">Стоимость 15000грн</li>
+          <li>Продолжительность: 5 часов</li>
+          <li>Количество обработаных фото:400шт.</li>
+          <li>Срок отдачи материала:3 недели.</li>
+          <li>Консультация фотографа и помощь в создании образов</li>
+          <li>Аренда фотостудии оплачивается отдельно</li>
+        </ul>
+        <div class="booking"><a href="tel:+38(098)786-66-42"><input type="button" value="Заказать"></a></div>
+      </div> 
+    </div>
+  </div>
+  <h2 >Новгодняя фотосессия</h2>
+  <div class="item-price">
+    <div class="price price-econom">
+      <div class="price-newyear-img"></div>
+      <div class="price-list">
+        <ul>
+          <li class="price-header">Стандартаная фотосессия</li>
+          <li class="price-price">Стоимость 10000грн</li>
+          <li>Продолжительность: 4 часа</li>
+          <li>Количество обработаных фото:250-300шт.</li>
+          <li>Срок отдачи материала:1 месяц.</li>
+          <li>Консультация фотографа и помощь в создании образов</li>
+          <li>Аренда фотостудии оплачивается отдельно</li>
+        </ul>
+        <div class="booking"><a href="tel:+38(098)786-66-42"><input type="button" value="Заказать "></a></div>
+      </div>
+    </div>
+    <div class="price price-vip">
+      <div class="price-newyear-img"></div>
+      <div class="price-list">
+        <ul>
+          <li class="price-header">VIP фотосессия</li>
+          <li class="price-price">Стоимость 15000грн</li>
+          <li>Продолжительность: 5 часов</li>
+          <li>Количество обработаных фото:400шт.</li>
+          <li>Срок отдачи материала:3 недели.</li>
+          <li>Консультация фотографа и помощь в создании образов</li>
+          <li>Аренда фотостудии оплачивается отдельно</li>
+        </ul>
+        <div class="booking"><a href="tel:+38(098)786-66-42"><input type="button" value="Заказать"></a></div>
+      </div> 
+    </div>
+  </div>
+  <h2 >Cемейная фотосессия</h2>
+  <div class="item-price">
+    <div class="price price-econom">
+      <div class="price-family-img"></div>
+      <div class="price-list">
+        <ul>
+          <li class="price-header">Стандартаная фотосессия</li>
+          <li class="price-price">Стоимость 10000грн</li>
+          <li>Продолжительность: 4 часа</li>
+          <li>Количество обработаных фото:250-300шт.</li>
+          <li>Срок отдачи материала:1 месяц.</li>
+          <li>Консультация фотографа и помощь в создании образов</li>
+          <li>Аренда фотостудии оплачивается отдельно</li>
+        </ul>
+        <div class="booking"><a href="tel:+38(098)786-66-42"><input type="button" value="Заказать "></a></div>
+      </div>
+    </div>
+    <div class="price price-vip">
+      <div class="price-family-img"></div>
+      <div class="price-list">
+        <ul>
+          <li class="price-header">VIP фотосессия</li>
+          <li class="price-price">Стоимость 15000грн</li>
+          <li>Продолжительность: 5 часов</li>
+          <li>Количество обработаных фото:400шт.</li>
+          <li>Срок отдачи материала:3 недели.</li>
+          <li>Консультация фотографа и помощь в создании образов</li>
+          <li>Аренда фотостудии оплачивается отдельно</li>
+        </ul>
+        <div class="booking"><a href="tel:+38(098)786-66-42"><input type="button" value="Заказать"></a></div>
+      </div> 
+    </div>
+  </div>
+  <h2 >Love story</h2>
+  <div class="item-price">
+    <div class="price price-econom">
+      <div class="price-love-img"></div>
+      <div class="price-list">
+        <ul>
+          <li class="price-header">Стандартаная фотосессия</li>
+          <li class="price-price">Стоимость 10000грн</li>
+          <li>Продолжительность: 4 часа</li>
+          <li>Количество обработаных фото:250-300шт.</li>
+          <li>Срок отдачи материала:1 месяц.</li>
+          <li>Консультация фотографа и помощь в создании образов</li>
+          <li>Аренда фотостудии оплачивается отдельно</li>
+        </ul>
+        <div class="booking"><a href="tel:+38(098)786-66-42"><input type="button" value="Заказать "></a></div>
+      </div>
+    </div>
+    <div class="price price-vip">
+      <div class="price-love-img"></div>
+      <div class="price-list">
+        <ul>
+          <li class="price-header">VIP фотосессия</li>
+          <li class="price-price">Стоимость 15000грн</li>
+          <li>Продолжительность: 5 часов</li>
+          <li>Количество обработаных фото:400шт.</li>
+          <li>Срок отдачи материала:3 недели.</li>
+          <li>Консультация фотографа и помощь в создании образов</li>
+          <li>Аренда фотостудии оплачивается отдельно</li>
+        </ul>
+        <div class="booking"><a href="tel:+38(098)786-66-42"><input type="button" value="Заказать"></a></div>
+      </div> 
+    </div>
+  </div>
+  <h2>Мастер класс</h2>
+  <div class="item-price master-price">
+    <div class="price price-econom">
+      <div class="price-master-img"></div>
+      <div class="price-list">
+        <ul>
+          <li class="price-header">Мастер класс</li>
+          <li class="price-price">Стоимость 2000грн</li>
+          <li>Продолжительность: 3 часа</li>
+          <li>Количество сделанных фото:50-55шт.</li>
+          <li>Индивидуальный подход к каждому</li>
+        </ul>
+        <div class="booking"><a href="tel:+38(098)786-66-42"><input type="button" value="Записаться"></a></div>
+      </div>
+    </div>
+  </div>
+  <h2 >Другие пакеты</h2>
+  <div class="item-price">
+    <div class="price price-econom">
+      <div class="price-party-img"></div>
+      <div class="price-list">
+        <ul>
+          <li class="price-header">Корпоратив</li>
+          <li class="price-price">Стоимость 10000грн</li>
+          <li>Продолжительность: 4 часа</li>
+          <li>Количество обработаных фото:250-300шт.</li>
+          <li>Срок отдачи материала:1 месяц.</li>
+          <li>Консультация фотографа и помощь в создании образов</li>
+          <li>Аренда фотостудии оплачивается отдельно</li>
+        </ul>
+        <div class="booking"><a href="tel:+38(098)786-66-42"><input type="button" value="Заказать "></a></div>
+      </div>
+    </div>
+    <div class="price price-vip">
+      <div class="price-birthday-img"></div>
+      <div class="price-list">
+        <ul>
+          <li class="price-header">День рождения</li>
+          <li class="price-price">Стоимость 15000грн</li>
+          <li>Продолжительность: 5 часов</li>
+          <li>Количество обработаных фото:400шт.</li>
+          <li>Срок отдачи материала:3 недели.</li>
+          <li>Консультация фотографа и помощь в создании образов</li>
+          <li>Аренда фотостудии оплачивается отдельно</li>
+        </ul>
+        <div class="booking"><a href="tel:+38(098)786-66-42"><input type="button" value="Заказать"></a></div>
+      </div> 
+    </div>
+  </div>
+ 
+</div>
+
+
+
+
+
+
+
+
+
+<footer class="footer-desktop">
+  <div class="footer-menu">
+    <ul>
+      <li><a href="/index.html">Главная</a></li>
+      <li><a href="/service.html">Услуги</a></li>
+      <li><a href="/price.html">Цена</a></li>
+      <li><a href="/blog.html">Блог</a></li>
+      <li><a href="/portfolio.html">Портфолио</a></li>
+      <li><a href="/contact.html"> Контакты</a></li>
+    </ul>
+  </div>
+  <div class="footer-number">
+    <a href="tel:+38(098)7866642" class="tel"> +38(098)786-66-42</a>
+  </div>
+  <div class="footer-social">
+    <div><a href="#"> <img src='/images/icon_Instagram.png'> </a> </div>
+    <div><a href="#"><img src='/images/icon_Facebook.png'></a> </div>
+    <div><a href="#"><img src='/images/icon_YouTube.png'></a> </div>
+    <div><a href="#"><img src='/images/icon_Twitt.png'></a> </div>
+    <div><a href="#"><img src='/images/icon_Linked (1).png'></a> </div>
+  
+  </div>
+  <div class="footer-author">
+    <h6>Andrii Tymko  2019</h6>
+  </div>
+  </footer>
+
+
+<script src="scripts/search.js"></script>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> -->
+
+<script src="scripts/main.js"></script>
+</body>
+</html>
