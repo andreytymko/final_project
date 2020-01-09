@@ -1,5 +1,116 @@
 #map{ 
     width: 100%;
     height: 400px;
-   
+}
+.contact-info a{
+    color: black;
+}
+.contacts{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    padding-bottom: 30px;
+    justify-content: left;
+}
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    /* grid-template-rows: auto auto auto auto; */
+    justify-content: left;
+    align-items: center;
+    
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-main{
+    padding-top: 20px;
+}
+.inline{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    padding-bottom: 10px;
+}
+.inline input{
+    width: 250px;
+    height: 30px;
+    border-radius: 7px;
+}
+.inline input:focus{
+    /* border: 0; */
+    outline: 0px;
+}
+.inline textarea{
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+}
+.inline p:first-child{
+    width: 200px;
+    text-align: right;
+    padding-right: 10px;
+}
+.container{
+    padding-bottom: 30px;
+}
+.social,
+.phone,
+.adress,
+.workday{
+    text-align: left;
+    width: 100%;
+}
+.workday img,
+.adress img
+{
+    width: 20px;
+    height: 20px;
+}
+.workday-info,
+.adress-info
+{
+    display: flex;
+    
+}
+.social-items{
+    padding-top: 20px;
+    /* padding-left: 20px; */
+    display: flex;
+    flex-direction: row;
+    /* grid-template-columns: auto auto auto auto auto; */
+    justify-content: left;
+
+    /* grid-gap: 10px; */
+}
+.social-items div{
+    padding-right: 10px;
+}
+.social-items div:hover{
+    transform: scale(1.1);
+}
+
+
+@media all and (max-width:1150px){
+ 
+
+    .inline{
+        flex-direction: column;
+    }
+    .inline p:first-child{
+        text-align: center;
+}
+}
+@media all and (max-width:760px){
+       .contacts{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        justify-content: center;
+    }
+
 }

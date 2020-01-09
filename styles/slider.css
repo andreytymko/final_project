@@ -23,6 +23,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    transition: 2s all linear;
     
   }
  

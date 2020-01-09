@@ -21,6 +21,7 @@ a{
     position:fixed;
     display: grid;
     grid-template-columns: auto auto;
+    z-index: 1;
 }
 /* .header:after{
     content:"";
@@ -176,6 +177,13 @@ nav li li a:hover{
     font-size: 12px;
     color: red;
 }
+  
+@media only screen and (min-width: 1001px) {
+    nav{
+        display:block;
+      }
+      
+  }
 
 @media only screen and (max-width: 1180px) {
     nav >ul>li >a{
@@ -299,13 +307,7 @@ nav li li a:hover{
   
   }
 
-  
-@media only screen and (min-width: 1001px) {
-  nav{
-      display:block;
-    }
-    
-}
+
   
 
 @media all and (max-width:500px){

@@ -77,16 +77,39 @@
   <ul class="price-note">
     <li><span>*</span> если Вы не найдете подходящий для Вас пакет услуг фотографа, можем сформировать тарифы под индивидуальные потребности заказчика.</li>
   </ul>
+  <div class="sortAndFilter">
+    <div class="filter">
+      <div id="price-filter">
+        <p>from <input type="text" id="from"></p>
+        <p>to <input type="text" id="to"></p>
+      </div>
+      <input type="button" value="Send" id="send">
+    </div>
+  <div class="sort">Сортировать
+    <button id="price-up" > От дешевых к дорогим</button>
+    <button id="price-down" > От дорогих к дешевым</button>
+    <button id="popular" > По популярности</button>
+    <button id="time" > По времени</button>
 
-  <h2 >Свадебная фотосессия</h2>
-  <div class="item-price">
-    <div class="price price-econom">
+  </div>
+  </div>
+
+  <!-- <p><select >
+    <option disabled selected>Сортировать</option>
+    <option > <button id="price-up"> От дешевых к дорогим</button></option>
+    <option id="price-down">От дорогих к дешевым</option>
+    <option id="popular">По популярности</option>
+    <option >По рейтингу</option>
+   </select></p> -->
+  <div class="main-price-block">
+  
+    <div price="10000" time = '6' popul ="1"class="price price-econom">
       <div class="price-wedding-img"></div>
       <div class="price-list">
         <ul>
-          <li class="price-header">Стандартаная фотосессия</li>
+          <li class="price-header">Свадебная фотосессия</li>
           <li class="price-price">Стоимость 10000грн</li>
-          <li>Продолжительность: 4 часа</li>
+          <li>Продолжительность: 6 чаcов</li>
           <li>Количество обработаных фото:250-300шт.</li>
           <li>Срок отдачи материала:1 месяц.</li>
           <li>Консультация фотографа и помощь в создании образов</li>
@@ -95,13 +118,13 @@
         <div class="booking"><a href="tel:+38(098)786-66-42"><input type="button" value="Заказать "></a></div>
       </div>
     </div>
-    <div class="price price-vip">
+    <div  price="20000" time = '12' popul ="5" class="price price-vip">
       <div class="price-wedding-img"></div>
       <div class="price-list">
         <ul>
-          <li class="price-header">VIP фотосессия</li>
-          <li class="price-price">Стоимость 15000грн</li>
-          <li>Продолжительность: 5 часов</li>
+          <li class="price-header"> Свадебная VIP фотосессия</li>
+          <li class="price-price">Стоимость 20000грн</li>
+          <li>Продолжительность: 12 часов</li>
           <li>Количество обработаных фото:400шт.</li>
           <li>Срок отдачи материала:3 недели.</li>
           <li>Консультация фотографа и помощь в создании образов</li>
@@ -110,16 +133,13 @@
         <div class="booking"><a href="tel:+38(098)786-66-42"><input type="button" value="Заказать"></a></div>
       </div> 
     </div>
-  </div>
-  <h2 >Новгодняя фотосессия</h2>
-  <div class="item-price">
-    <div class="price price-econom">
+    <div price="700" time = '3'  popul ="1" class="price price-econom">
       <div class="price-newyear-img"></div>
       <div class="price-list">
         <ul>
-          <li class="price-header">Стандартаная фотосессия</li>
-          <li class="price-price">Стоимость 10000грн</li>
-          <li>Продолжительность: 4 часа</li>
+          <li class="price-header">Новогодняя фотосессия</li>
+          <li class="price-price">Стоимость 700грн</li>
+          <li>Продолжительность: 3 часа</li>
           <li>Количество обработаных фото:250-300шт.</li>
           <li>Срок отдачи материала:1 месяц.</li>
           <li>Консультация фотографа и помощь в создании образов</li>
@@ -128,12 +148,12 @@
         <div class="booking"><a href="tel:+38(098)786-66-42"><input type="button" value="Заказать "></a></div>
       </div>
     </div>
-    <div class="price price-vip">
+    <div price="1000" time = '5' popul ="4" class="price price-vip">
       <div class="price-newyear-img"></div>
       <div class="price-list">
         <ul>
-          <li class="price-header">VIP фотосессия</li>
-          <li class="price-price">Стоимость 15000грн</li>
+          <li class="price-header"> Нвогодняя VIP фотосессия</li>
+          <li class="price-price">Стоимость 1000грн</li>
           <li>Продолжительность: 5 часов</li>
           <li>Количество обработаных фото:400шт.</li>
           <li>Срок отдачи материала:3 недели.</li>
@@ -143,16 +163,13 @@
         <div class="booking"><a href="tel:+38(098)786-66-42"><input type="button" value="Заказать"></a></div>
       </div> 
     </div>
-  </div>
-  <h2 >Cемейная фотосессия</h2>
-  <div class="item-price">
-    <div class="price price-econom">
+    <div price="600" time = '2' popul ="2" class="price price-econom">
       <div class="price-family-img"></div>
       <div class="price-list">
         <ul>
-          <li class="price-header">Стандартаная фотосессия</li>
-          <li class="price-price">Стоимость 10000грн</li>
-          <li>Продолжительность: 4 часа</li>
+          <li class="price-header">Семейная фотосессия</li>
+          <li class="price-price">Стоимость 600грн</li>
+          <li>Продолжительность: 2 часа</li>
           <li>Количество обработаных фото:250-300шт.</li>
           <li>Срок отдачи материала:1 месяц.</li>
           <li>Консультация фотографа и помощь в создании образов</li>
@@ -161,13 +178,13 @@
         <div class="booking"><a href="tel:+38(098)786-66-42"><input type="button" value="Заказать "></a></div>
       </div>
     </div>
-    <div class="price price-vip">
+    <div price="900" time = '4' popul ="3" class="price price-vip">
       <div class="price-family-img"></div>
       <div class="price-list">
         <ul>
-          <li class="price-header">VIP фотосессия</li>
-          <li class="price-price">Стоимость 15000грн</li>
-          <li>Продолжительность: 5 часов</li>
+          <li class="price-header"> Семейная VIP фотосессия</li>
+          <li class="price-price">Стоимость 900грн</li>
+          <li>Продолжительность: 4 часa</li>
           <li>Количество обработаных фото:400шт.</li>
           <li>Срок отдачи материала:3 недели.</li>
           <li>Консультация фотографа и помощь в создании образов</li>
@@ -176,16 +193,13 @@
         <div class="booking"><a href="tel:+38(098)786-66-42"><input type="button" value="Заказать"></a></div>
       </div> 
     </div>
-  </div>
-  <h2 >Love story</h2>
-  <div class="item-price">
-    <div class="price price-econom">
+    <div price="500" time = '3' popul ="4" class="price price-econom">
       <div class="price-love-img"></div>
       <div class="price-list">
         <ul>
-          <li class="price-header">Стандартаная фотосессия</li>
-          <li class="price-price">Стоимость 10000грн</li>
-          <li>Продолжительность: 4 часа</li>
+          <li class="price-header">Love Story фотосессия</li>
+          <li class="price-price">Стоимость 500грн</li>
+          <li>Продолжительность: 3 часа</li>
           <li>Количество обработаных фото:250-300шт.</li>
           <li>Срок отдачи материала:1 месяц.</li>
           <li>Консультация фотографа и помощь в создании образов</li>
@@ -194,13 +208,13 @@
         <div class="booking"><a href="tel:+38(098)786-66-42"><input type="button" value="Заказать "></a></div>
       </div>
     </div>
-    <div class="price price-vip">
+    <div price="700" time = '4' popul ="1" class="price price-vip">
       <div class="price-love-img"></div>
       <div class="price-list">
         <ul>
-          <li class="price-header">VIP фотосессия</li>
-          <li class="price-price">Стоимость 15000грн</li>
-          <li>Продолжительность: 5 часов</li>
+          <li class="price-header">Love Story VIP фотосессия</li>
+          <li class="price-price">Стоимость 700грн</li>
+          <li>Продолжительность: 4 часа</li>
           <li>Количество обработаных фото:400шт.</li>
           <li>Срок отдачи материала:3 недели.</li>
           <li>Консультация фотографа и помощь в создании образов</li>
@@ -209,46 +223,40 @@
         <div class="booking"><a href="tel:+38(098)786-66-42"><input type="button" value="Заказать"></a></div>
       </div> 
     </div>
-  </div>
-  <h2>Мастер класс</h2>
-  <div class="item-price master-price">
-    <div class="price price-econom">
+    <div price="2000" time = '5' popul ="0" class="price price-econom">
       <div class="price-master-img"></div>
       <div class="price-list">
         <ul>
           <li class="price-header">Мастер класс</li>
           <li class="price-price">Стоимость 2000грн</li>
-          <li>Продолжительность: 3 часа</li>
+          <li>Продолжительность: 5 часов</li>
           <li>Количество сделанных фото:50-55шт.</li>
           <li>Индивидуальный подход к каждому</li>
         </ul>
         <div class="booking"><a href="tel:+38(098)786-66-42"><input type="button" value="Записаться"></a></div>
       </div>
     </div>
-  </div>
-  <h2 >Другие пакеты</h2>
-  <div class="item-price">
-    <div class="price price-econom">
+    <div price="10000" time = '6' popul ="1" class="price price-econom">
       <div class="price-party-img"></div>
       <div class="price-list">
         <ul>
           <li class="price-header">Корпоратив</li>
           <li class="price-price">Стоимость 10000грн</li>
-          <li>Продолжительность: 4 часа</li>
-          <li>Количество обработаных фото:250-300шт.</li>
-          <li>Срок отдачи материала:1 месяц.</li>
-          <li>Консультация фотографа и помощь в создании образов</li>
-          <li>Аренда фотостудии оплачивается отдельно</li>
+          <li class="hidden-price">Продолжительность: 6 часов</li>
+          <li class="hidden-price">Количество обработаных фото:250-300шт.</li>
+          <li class="hidden-price"> Срок отдачи материала:1 месяц.</li>
+          <li class="hidden-price">Консультация фотографа и помощь в создании образов</li>
+          <li class="hidden-price"> Аренда фотостудии оплачивается отдельно</li>
         </ul>
         <div class="booking"><a href="tel:+38(098)786-66-42"><input type="button" value="Заказать "></a></div>
       </div>
     </div>
-    <div class="price price-vip">
+    <div price="1500" time = '5' popul ="5" class="price price-vip">
       <div class="price-birthday-img"></div>
       <div class="price-list">
         <ul>
           <li class="price-header">День рождения</li>
-          <li class="price-price">Стоимость 15000грн</li>
+          <li class="price-price">Стоимость 1500грн</li>
           <li>Продолжительность: 5 часов</li>
           <li>Количество обработаных фото:400шт.</li>
           <li>Срок отдачи материала:3 недели.</li>
@@ -258,8 +266,25 @@
         <div class="booking"><a href="tel:+38(098)786-66-42"><input type="button" value="Заказать"></a></div>
       </div> 
     </div>
-  </div>
- 
+    <div price="1000" time = '3' popul ="3" class="price price-vip">
+      <div class="price-kids-img"></div>
+      <div class="price-list">
+        <ul>
+          <li class="price-header">Детская фотосессия</li>
+          <li class="price-price">Стоимость 1000грн</li>
+          <li>Продолжительность: 3 часа</li>
+          <li>Количество обработаных фото:50шт.</li>
+          <li>Срок отдачи материала:3 недели.</li>
+          <li>Консультация фотографа и помощь в создании образов</li>
+          <li>Аренда фотостудии оплачивается отдельно</li>
+        </ul>
+        <div class="booking"><a href="tel:+38(098)786-66-42"><input type="button" value="Заказать"></a></div>
+      </div> 
+    </div> 
+
+
+
+</div>
 </div>
 
 
@@ -297,11 +322,11 @@
   </div>
   </footer>
 
+<script src="scripts/main.js"></script>
 
 <script src="scripts/search.js"></script>
-
+<script src="/scripts/sorting.js"></script>
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> -->
 
-<script src="scripts/main.js"></script>
 </body>
 </html>

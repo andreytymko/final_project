@@ -20,6 +20,23 @@
     font-family: 'Amatic SC', cursive;
     letter-spacing: 0.3em;
 }
+.main_header-main{
+    display: block;
+    text-align: center;
+    position: relative;
+    bottom: 300px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Amatic SC', cursive;
+    letter-spacing: 0.3em;
+    opacity: 0.8;
+}
+.main_header-main h1{
+    font-size: 100px;
+}
+.main_header-main h3{
+    font-size: 30px;
+}
 
 .container{
     width: 100%;

@@ -13,6 +13,23 @@
 sup{
     color: red;
 }
+.sort{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+.sort button{
+    width: 200px;
+    background-color: rgb(235, 222, 222);
+    border: 1px solid rgb(235, 222, 222);
+    /* text-align: left; */
+}
+.sort button:hover{
+    background-color: rgb(223, 126, 126);
+    transition: all 1s linear;
+    cursor: pointer;
+}
 .price-note li{
     list-style-type: none;
     font-size: 15px;
@@ -39,11 +56,64 @@ sup{
 .date-packet{
     font-size: 13px;
 }
-
-@media all and (max-width:670px){
-    .price-party-img,
-    .price-birthday-img{
+.main-price-block{
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    justify-content: space-around;
+    grid-gap: 30px;
+}
+.main-price-block .price{
+    width: 300px;
+    /* height: 400px; */
+    background-color: rgb(235, 222, 222);
+    border: 1px solid pink;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    
+}
+.price-kids-img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-image: url(/images/kids.jpg);
+    background-size: cover;
+}
+.main-price-block .price-header{
+    font-size: 20px;
+}
+.main-price-block .price-price{
+    font-size: 15px;
+}
+.main-price-block .price-newyear-img,
+.main-price-block .price-family-img,
+.main-price-block .price-wedding-img,
+.main-price-block .price-love-img,
+.main-price-block .price-master-img,
+.main-price-block .price-birthday-img,
+.main-price-block .price-party-img,
+.main-price-block .price-kids-img{
         width: 300px;
         height: 150px;
+        text-align: center;
     }
+
+
+
+
+
+
+@media all and (max-width:1150px){
+    .main-price-block{
+        grid-template-columns:auto auto ;
+
+    }
+
 }
+@media all and (max-width:670px){
+    .main-price-block{
+        grid-template-columns:auto  ;
+
+    }
+
+}
+

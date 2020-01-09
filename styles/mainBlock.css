@@ -43,6 +43,8 @@
     padding: 0 20px;
 } */
 .mainInfo{
+    position: relative;
+    bottom: 150px;
     text-align: center;    
     width: 100%;
     padding: 0 10%;
@@ -361,8 +363,14 @@
      
 }
 @media all and (max-width:960px){
+    .mainInfo{
+        position: relative;
+        bottom: 0px;
+    }
     .main-head-photo{
         display: block;
+        position: relative;
+        bottom: 70px;
     }
     
     .whyme{
@@ -387,6 +395,10 @@
 }
 
 @media all and (max-width:760px){
+    .mainInfo{
+        position: relative;
+        bottom: 150px;
+    }
     .main-head-photo{
         display: none;
     }
@@ -417,6 +429,10 @@
 }
 
 @media all and (max-width:600px){
+    .mainInfo{
+        position: relative;
+        bottom: 29  0px;
+    }
     .myphoto img {
         width: 300px;
     }
