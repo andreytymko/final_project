@@ -30,6 +30,10 @@ sup{
     transition: all 1s linear;
     cursor: pointer;
 }
+.sort button:focus{
+    background-color: brown;
+    color: wheat;
+}
 .price-note li{
     list-style-type: none;
     font-size: 15px;

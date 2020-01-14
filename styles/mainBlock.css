@@ -8,7 +8,6 @@
     display: none;
     min-width: 100%;
     height: 500px;
-    background-image: url(/images/mainphoto.jpg);
     background-size: cover;
     
 }
@@ -97,49 +96,9 @@
     height: 200px;
     cursor: pointer;
 }
-.service1{
-    background-image: url(/images/main_portfolio/family.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.service2{
-    background-image: url(/images/main_portfolio/wedding2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.service3{
-    background-image: url(/images/main_portfolio/newyear.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.service4{
-    background-image: url(/images/main_portfolio/wedding3.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.service5{
-    background-image: url(/images/main_portfolio/wedding.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.service6{
-    background-image: url(/images/main_portfolio/love.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.service7{
-    background-image: url(/images/main_portfolio/portrai.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.service8{
-    background-image: url(/images/main_portfolio/love2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 .service:hover{
     
-    background:rgba(78, 168, 233, 0.503);
+    background-color:rgba(78, 168, 233, 0.68);
     transition: linear .2s ;
     
     
@@ -152,8 +111,10 @@
     font-size: 25px;
     font-weight:bold;
     position: relative;
+
     top: 40%;
-    color:white ;
+    /* background-color:rgba(78, 168, 233, 0.68); */
+    
 }
 .service6:hover::after,
 .service8:hover::after{
@@ -195,8 +156,8 @@
     justify-content: center;
     /* background-image: url(/images/workwithme.jpg);
     background-repeat: no-repeat;
-    background-size: cover;  */
-    /* margin: auto 10%; */
+    background-size: cover;   */
+     margin: auto 10%;
     padding-bottom: 40px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.687);
 }
@@ -204,9 +165,9 @@
 .cooperation_img{
     width: 620px;
     height: 600px;
-    background-image: url(/images/workwithme.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-image: url(/images/workwithme.jpg); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
 }
 .adv_container{
     width: 100%;
@@ -240,23 +201,23 @@
 .adv-img1{
     width: 360px;
     height: 240px;
-    background-image: url(/images/adv1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* background-image: url(/images/adv1.jpg);
+    background-size: cover; */
+    /* background-repeat: no-repeat; */
 }
 .adv-img2{
     width: 360px;
     height: 240px;
-    background-image: url(/images/adv2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* background-image: url(/images/adv2.jpg);
+    background-size: cover; */
+    /* background-repeat: no-repeat; */
 }
 .adv-img3{
     width: 360px;
     height: 240px;
-    background-image: url(/images/adv3.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* background-image: url(/images/adv3.jpg);
+    background-size: cover; */
+    /* background-repeat: no-repeat; */
 }
 
 .footer-desktop{

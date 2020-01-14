@@ -2,7 +2,7 @@
   
 // slider
     var slider = function() {
-    var names = ['images/slider0.jpg','images/slider1.jpg','images/slider2.jpg','images/slider3.jpg','images/slider4.jpg'];
+    // var names = ['images/slider0.jpg','images/slider1.jpg','images/slider2.jpg','images/slider3.jpg','images/slider4.jpg'];
       var backImg = [];
       backImg[0] = "../images/slider0.jpg";
       backImg[1] = "../images/slider1.jpg";
@@ -68,13 +68,13 @@
     slider();
   
 // })();
-// navigation
 
-let mobileMenu = document.getElementById('menu-icon');
-mobileMenu.onclick = function(){
-    let nav = document.getElementsByTagName('nav');
-    nav.style.display = 'block';
-}
+
+// let mobileMenu = document.getElementById('menu-icon');
+// mobileMenu.onclick = function(){
+//     let nav = document.getElementsByTagName('nav');
+//     nav.style.display = 'block';
+// }
 
 
 
@@ -133,4 +133,59 @@ if(properties.info){
   }
 };
 
-//
+//images-main
+let mainPhoto = document.querySelector('.main-head-photo');
+mainPhoto.style.background = ' url(/images/mainphoto.jpg)';
+
+let service1 = document.querySelector('.service1');
+service1.style.background = 'url(/images/main_portfolio/family.jpg)';
+service1.style.backgroundSize = 'cover';
+
+let service2 = document.querySelector('.service2');
+service2.style.background = 'url(/images/main_portfolio/newyear.jpg)';
+service2.style.backgroundSize = 'cover';
+
+let service3 = document.querySelector('.service3');
+service3.style.background = 'url(/images/main_portfolio/wedding2.jpg)';
+service3.style.backgroundSize = 'cover';
+
+let service4 = document.querySelector('.service4');
+service4.style.background = 'url(/images/main_portfolio/wedding3.jpg)';
+service4.style.backgroundSize = 'cover';
+
+let service5 = document.querySelector('.service5');
+service5.style.background = 'url(/images/main_portfolio/wedding.jpg)';
+service5.style.backgroundSize = 'cover';
+
+let service6 = document.querySelector('.service6');
+service6.style.background = 'url(/images/main_portfolio/love.jpg)';
+service6.style.backgroundSize = 'cover';
+
+let service7 = document.querySelector('.service7');
+service7.style.background = 'url(/images/main_portfolio/portrai.jpg)';
+service7.style.backgroundSize = 'cover';
+
+let service8 = document.querySelector('.service8');
+service8.style.background = 'url(/images/main_portfolio/love2.jpg)';
+service8.style.backgroundSize = 'cover';
+
+let adv1 = document.querySelector('.adv-img1');
+adv1.style.background = 'url(/images/adv1.jpg)';
+adv1.style.backgroundSize = 'cover';
+
+let adv2 = document.querySelector('.adv-img2');
+adv2.style.background = 'url(/images/adv2.jpg)';
+adv2.style.backgroundSize = 'cover';
+
+let adv3 = document.querySelector('.adv-img3');
+adv3.style.background = 'url(/images/adv3.jpg)';
+adv3.style.backgroundSize = 'cover';
+
+let cooperation = document.querySelector('.cooperation_img');
+cooperation.style.background = 'url(/images/workwithme.jpg)';
+cooperation.style.backgroundSize = 'cover';
+
+let dariya = document.querySelector('.myphoto');
+let img = document.createElement('img');
+img.src = '/images/KirilenkoDaria.jpg';
+dariya.appendChild(img);

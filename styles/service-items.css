@@ -430,8 +430,18 @@
 }
 
 
-
-
+.love-photo>div:hover,
+.wedding-photo>div:hover,
+.family-photo>div:hover,
+.newyear-photo>div:hover,
+.master-photo>div:hover
+{
+    cursor: pointer;
+    transition: all 1s linear;
+    filter: contrast(1.5);
+    filter: drop-shadow(2);
+    color: blue;
+}
 
 
 
@@ -611,6 +621,7 @@ justify-content: center;}
         justify-content: center;
         grid-gap: 5px;
     }
+
     .love-photo-1,
     .family-photo-1,
     .newyear-photo-1,
@@ -688,5 +699,7 @@ justify-content: center;}
     }
     
 }
+
+
 
 

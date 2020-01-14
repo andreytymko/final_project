@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 
+
 </head>
 <body>
     <div class="header">
@@ -99,20 +100,21 @@
         <form name="MyForm" action="/mail.php" method="post" class="form-main">
         <div class="inline">
           <p>Имя*</p>
-          <p><input class="input" name="name" type="text" placeholder="Андрей"/> </p>
+          <p><input class="input" name="name" type="text" maxlength="15" placeholder="Андрей"/> </p>
       </div>
       <div class="inline">
         <p>Номер телефона*</p>
-        <p><input class="input" name="email" type="text" placeholder="098-786-66-42" /> </p>
+        <p><input class="input" name="email" id='tel' type="text" value='+380' /> </p>
       </div>
       <div class="inline">
         <p>Тема письма</p>
-        <p> <input class="input" name="sub" type="text" placeholder="Тема письма"/> </p>
+        <p> <input class="input" name="sub" type="text" maxlength='20'  placeholder="Тема письма"/> </p>
       </div>
       <div class="inline">
         <p>Ваш комантарий</p>
-        <p><br /><textarea name="body" placeholder="Коментарий к заказу"></textarea></p>
+        <p><br /><input name="body" id="comment" max="200" type='text' value='' placeholder="Коментарий к заказу"></input></p>
       </div>
+      <div id="counter"></div>
         <p><input id="submit" value="Отправить" type="submit" /></p>
 </form>
     </div>
@@ -159,30 +161,39 @@
 
       </div>
       <div class="workday">
+        <h3>Поделись с друзьями</h3>
+        <div id="fb-root"></div>
+	
+        <a href="https://twitter.com/share" class="twitter-share-button" 
+        data-lang="ru">Твитнуть</a>
+        
+        <!-- Your share button code -->
+        <div class="fb-share-button" 
+          data-href="https://dariyakirilenko.000webhostapp.com/index.html" 
+          data-layout="button_count">
+        </div>
+      
         <!-- <h3>Режим работы</h3>
         <div class="workday-info">
           <img src="/images/time2.png">
         <div>пн-сб: 9:00-21:00</div>
       </div> -->
-      <a onclick="Share.vkontakte('URL','TITLE','IMG_PATH','DESC')"> {шарь меня полностью}</a>
+      <!-- <a onclick="Share.vkontakte('URL','TITLE','IMG_PATH','DESC')"> {шарь меня полностью}</a>
       <a onclick="Share.facebook('URL','TITLE','IMG_PATH','DESC')"> {шарь меня полностью}</a>
       <a onclick="Share.mailru('URL','TITLE','IMG_PATH','DESC')"> {шарь меня полностью}</a>
       <a onclick="Share.odnoklassniki('URL','DESC')"> {шарь меня полностью}</a>
-      <a onclick="Share.twitter('URL','TITLE')"> {шарь меня полностью}</a>
+      <a onclick="Share.twitter('URL','TITLE')"> {шарь меня полностью}</a> -->
 
 
-      </div>
+      <!-- </div> -->
+
     </div>
   </div>
-<div id="map"></div>
-
-
-
-
 
 
 </div>
 
+<div id="map"></div>
 
 
 
@@ -219,7 +230,10 @@
   </div>
   </footer>
 
+<script src="/scripts/form.js"></script>
+<script src="/scripts/share.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBThNuuBmrPxL7rT9dQBh0d8WXh7ENh2tY&callback=initMap"async defer></script>
+
 <script src="scripts/search.js"></script>
 <script src="scripts/main.js"></script>
 </body>
