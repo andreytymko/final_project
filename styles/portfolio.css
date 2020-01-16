@@ -78,18 +78,22 @@
 
 
 /* pagination */
-#pagination{
+.pagination1,.pagination2{
+  height: 50px;
   padding-top: 20px;
   list-style-type: none;
   display: flex;
   justify-content: center;
 }
-#pagination li{
+.pagination1 li,.pagination1 li
+{
   padding:5px 10px;
   border: 1px solid grey;
 
 }
-#pagination li:hover,#pagination li.active{
+.pagination1 li:hover,.pagination1 li.active,
+.pagination2 li:hover,.pagination2 li.active
+{
   cursor: pointer;
   border: 1px solid red;
   color: red;

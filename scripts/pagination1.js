@@ -37,7 +37,7 @@ let portfolioArray =[
 
 ]
 let portfolio = document.querySelector('.imageGrid');
-let pagination = document.querySelector('#pagination ');
+let pagination1 = document.querySelector('.pagination1');
 
 let notesOnPage = 6;
 let countOfItems = Math.ceil(portfolioArray.length/notesOnPage);
@@ -46,20 +46,20 @@ let items = [];
 let li1 = document.createElement('li');
 let first = document.createTextNode('<<');
 li1.appendChild(first);
-pagination.appendChild(li1);
+pagination1.appendChild(li1);
 items.push(li1);
 for(let i = 1; i<= countOfItems ;i++){
     let li = document.createElement('li');
     let number = document.createTextNode(i) ;
     li.appendChild(number);
-    pagination.appendChild(li);
+    pagination1.appendChild(li);
     items.push(li);
 }
 
 let li2 = document.createElement('li');
 let last = document.createTextNode('>>');
 li2.appendChild(last);
-pagination.appendChild(li2);
+pagination1.appendChild(li2);
 items.push(li2);
 
 showPage(items[1])
@@ -77,7 +77,7 @@ items[notesOnPage+1].onclick = function(){
 }
 
 function showPage(unit){
-    let active = document.querySelector('#pagination li.active');
+    let active = document.querySelector('.pagination1 li.active');
     if(active){
         active.classList.remove('active');
     }

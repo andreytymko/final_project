@@ -22,3 +22,46 @@
     border-radius: 5px 5px 0 0;
     box-shadow: inset rgba(0, 0, 0, 0.2) 0 64px 64px 16px;
 }
+.commentsInput{
+    display: grid;
+    justify-content: center;
+}
+
+.block-name,
+.block-body,
+.block-add{
+    display: grid;
+    justify-content: center;
+    width: 400px;
+}
+.comment-name{
+    margin-bottom: 10px;
+    width: 150px;
+}
+.comment-body{
+    margin-bottom: 15px;
+    width: 250px;
+    height: 60px;
+    border-radius: 5px;
+
+}
+
+.comment-add{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(96, 188, 235);
+    border: 0px;
+}
+.comment-add:hover{
+    cursor: pointer;
+}
+
+
+.timeBlock{
+    font-size: 10px;
+
+}
+.bodyBlock{
+    font-size: 20px;
+    padding-bottom: 40px;
+}
