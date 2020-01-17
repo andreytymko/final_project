@@ -15,10 +15,9 @@ a{
     font-size:16px;
     color:#fff;
     line-height:1.5;
-    font-family: 'Devroye';
+    font-family: 'Roboto',sans-serif;
     background:rgba(31, 39, 46, 0.5);
     width:100%;
-    height: 100px;
     position:fixed;
     display: grid;
     grid-template-columns: auto auto;
@@ -316,7 +315,7 @@ nav li li a:hover{
 @media all and (max-width:500px){
     .header{
         background:rgb(31, 39, 46);
-        margin-bottom: 150px;
+        margin-bottom: 300px;
     }
    
 }

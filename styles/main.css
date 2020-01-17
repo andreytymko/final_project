@@ -3,12 +3,12 @@
 @import url('slider.css');
 @import url('nav.css');
 @import url('mainBlock.css');
+@import url('portfolio.css');
 @import url('blog.css');
 @import url('service-items.css');
 @import url('service.css');
 @import url('price.css');
 @import url('contact.css');
-@import url('portfolio.css');
 
 @font-face{
   font-family: 'Nautilus';
@@ -20,6 +20,7 @@
   font-family: 'Blogger-Italic';
   src: url("/font/Blogger-Italic.otf") format("opentype"); }
 
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -27,9 +28,8 @@
   }
   
   body {
-    background:  #F5F5F5;
+    background: #ffffff;
     color: #141414cf;
-    
-    font-family: 'Devroye-Sc';
+    font-family: 'Roboto Condensed', sans-serif;
 
   }
