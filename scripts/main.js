@@ -1,9 +1,9 @@
 // window.onload = (function() {
   
 // slider
-    var slider = function() {
+    let slider = function() {
     // var names = ['images/slider0.jpg','images/slider1.jpg','images/slider2.jpg','images/slider3.jpg','images/slider4.jpg'];
-      var backImg = [];
+      let backImg = [];
       backImg[0] = "../images/slider0.jpg";
       backImg[1] = "../images/slider1.jpg";
       backImg[2] = "../images/slider2.jpg";
@@ -14,13 +14,13 @@
       backImg[7] = "../images/slider7.jpg";
 
       
-      var i = 0;
-      var x = (backImg.length) - 1;
-      var int = 7000;
+      let i = 0;
+      let x = (backImg.length) - 1;
+      let int = 7000;
       
       interval = setInterval(showNext, int); // hoist?
       
-      var elements = {
+      let elements = {
         slider: document.querySelector('.slider'),
         btn: { 
           left: document.querySelector('.btnLeft'),
@@ -28,32 +28,32 @@
         }
       }
       
-      var startInterval = function() {
+      let startInterval = function() {
          interval = setInterval(showNext, int);
       }
       
-      var stopInterval = function() {
+      let stopInterval = function() {
         clearInterval(interval);
       }
       
-      var attachEvents = function() {
+      let attachEvents = function() {
         elements.btn.left.onclick = function() { showPrevious(); };
         elements.btn.right.onclick = function() {  showNext(); };
         elements.slider.addEventListener("mouseenter", startInterval);
         elements.slider.addEventListener("mouseleave", stopInterval);
       };
       
-      var changeImg = function() {
+      let changeImg = function() {
         elements.slider.style.backgroundImage = 'url(' + backImg[i] + ')';
        
       }
       
-      var initialize = (function() {
+      let initialize = (function() {
         attachEvents();
         changeImg(i);
       })();
 
-      var showPrevious = function() {
+      let showPrevious = function() {
         (i <= 0) ? i = 3 : i--;
         changeImg(i);
       };

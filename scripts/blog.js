@@ -2,6 +2,8 @@ let comments = [];
 loadComments();
 
 document.querySelector('.comment-add').onclick = function(){
+    location.reload()
+
     let commentName = document.querySelector('.comment-name');
     let commentBody = document.querySelector('.comment-body');
 
@@ -26,20 +28,23 @@ function saveComments(){
 function loadComments(){
     if (localStorage.getItem('comments')) comments = JSON.parse(localStorage.getItem('comments'));
     showComments();
+
 }
 
 function showComments (){   
 
     let commentField = document.querySelector('.commentsOutput');
-    let wrapper = document.createElement('div')
-
+    let wrapper = document.createElement('div');
 
     // let out = '';
     comments.forEach(function(item){
+        let timeBlock = document.createElement('div');
+        let nameBlock = document.createElement('div');
+        let bodyBlock = document.createElement('div');
 
-        let timeBlock = document.createElement('div')
-        let nameBlock = document.createElement('div')
-        let bodyBlock = document.createElement('div')
+        
+          let info = document.createElement('div');
+
         let p1 = document.createTextNode(timeConverter(item.time));
         let p2 = document.createTextNode(item.name);
         let p3 = document.createTextNode(item.body);
@@ -61,16 +66,23 @@ function showComments (){
         nameBlock.classList.add('nameBlock');
         bodyBlock.appendChild(body);
         bodyBlock.classList.add('bodyBlock');
+        info.classList.add('infoBlock')
+        info.appendChild(nameBlock);
+        info.appendChild(timeBlock);
 
-        wrapper.appendChild(timeBlock);
-        wrapper.appendChild(nameBlock);
-        wrapper.appendChild(bodyBlock);
+        // wrapper.appendChild(nameBlock);
         wrapper.classList.add("containerForComments")
+        // commentField.appendChild(bodyBlock)
+        // commentField.appendChild(bodyBlock)
+              wrapper.appendChild(info);
+            wrapper.appendChild(bodyBlock);
+
+    });      
+
+    
         commentField.appendChild(wrapper)
-        // commentField.appendChild(bodyBlock)
-        // commentField.appendChild(bodyBlock)
-        
-    });
+
+
 
 
     console.log(commentField);
@@ -81,14 +93,14 @@ function showComments (){
 }
 
 function timeConverter(UNIX_timestamp){
-    var a = new Date(UNIX_timestamp * 1000);
-    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    var year = a.getFullYear();
-    var month = months[a.getMonth()];
-    var date = a.getDate();
-    var hour = a.getHours();
-    var min = a.getMinutes();
-    var sec = a.getSeconds();
-    var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+    let a = new Date(UNIX_timestamp * 1000);
+    let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    let year = a.getFullYear();
+    let month = months[a.getMonth()];
+    let date = a.getDate();
+    let hour = a.getHours();
+    let min = a.getMinutes();
+    let sec = a.getSeconds();
+    let time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
     return time;
   }

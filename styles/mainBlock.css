@@ -150,11 +150,14 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.687);
 
 }
-
+.remove{
+    display: none;
+}
 .cooperation{
+    display: none;
     width: 100%;
     height: 700px;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     /* background-image: url(/images/workwithme.jpg);
     background-repeat: no-repeat;
@@ -419,6 +422,7 @@
         width: 140px;
         height: 90px;
     }
+    
     .logo a{
         font-size: 25px;
     }

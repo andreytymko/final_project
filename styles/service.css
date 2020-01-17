@@ -33,6 +33,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     border-radius: 10px;
+    box-shadow: 0 0 10px 7px gray;
        
 }
 
@@ -71,7 +72,7 @@
     
 }
 .service-price{
-    width: 120px;
+    width: 140px;
     font-size: 16px;
     display: flex;
     justify-content: left;
@@ -229,7 +230,7 @@
         display: none;
     }
     .service-header{
-        font-size: 18px;
+        font-size: 16px;
     }
     .service-button{
         padding-top: 30px;

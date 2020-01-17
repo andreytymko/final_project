@@ -4,10 +4,23 @@ $("#menu-icon").on("click", function(){
 	});
 	
 
+// let menu = document.querySelector('#menu-icon').onclick = function(){
+// let nav = document.querySelector('nav');
+
+// if(nav.style.display = 'none'){
+// 	nav.style.display = 'block';
+// }
+
+// if(nav.style.display = 'none'){
+// 	nav.style.display = 'block';
+// }
+
+// this.classList.add('active');
+// };
 
 
 
-var input,search,pr,result,result_arr, locale_HTML, result_store;
+let input,search,pr,result,result_arr, locale_HTML, result_store;
 
 
 function func() {
@@ -21,7 +34,7 @@ function FindOnPage(name, status) {
 	
 	if(input.length<3&&status==true)
 	{
-		// alert('Для поиска вы должны ввести три или более символов');
+		alert('Для поиска вы должны ввести три или более символов');
 		function FindOnPageBack() { document.body.innerHTML = locale_HTML; }
 	}
 	
@@ -34,20 +47,21 @@ function FindOnPage(name, status) {
 			result = pr.match(/>(.*?)</g);  //отсекаем все теги и получаем только текст
 			result_arr = [];   //в этом массиве будем хранить результат работы (подсветку)
 
-			var warning = true;
-			for(var i=0;i<result.length;i++) {
+			let warning = true;
+			for(let i=0;i<result.length;i++) {
 				if(result[i].match(eval(search))!=null) {
 					warning = false;
 				}
 			}
 			if(warning == true) {
 				// error.textContent = 'найдено ни одного совпадения';
+				alert('Не найдено ни одного совпадения')
 			}
 
-			for(var i=0; i<result.length;i++) {
+			for(let i=0; i<result.length;i++) {
 				result_arr[i] = result[i].replace(eval(search), '<span style="background-color:yellow;">'+input+'</span>'); //находим нужные элементы, задаем стиль и сохраняем в новый массив
 			}
-			for(var i=0; i<result.length;i++) {
+			for(let i=0; i<result.length;i++) {
 				pr=pr.replace(result[i],result_arr[i])  //заменяем в переменной с html текст на новый из новогом ассива
 			}
 			document.body.innerHTML = pr;  //заменяем html код

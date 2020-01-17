@@ -1,15 +1,24 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap&subset=cyrillic');
+/* @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap&subset=cyrillic'); */
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap');
 @import url('slider.css');
 @import url('nav.css');
 @import url('mainBlock.css');
-@import url('portfolio.css');
 @import url('blog.css');
 @import url('service-items.css');
 @import url('service.css');
 @import url('price.css');
 @import url('contact.css');
+@import url('portfolio.css');
 
+@font-face{
+  font-family: 'Nautilus';
+  src: url("/font/Nautilus.otf") format("opentype"); }
+@font-face{
+  font-family: 'Devroye';
+  src: url("/font/Devroye.ttf") format("opentype"); }
+@font-face{
+  font-family: 'Blogger-Italic';
+  src: url("/font/Blogger-Italic.otf") format("opentype"); }
 
 *{
     box-sizing:border-box;
@@ -18,8 +27,9 @@
   }
   
   body {
-    background: #ffffff;
+    background:  #F5F5F5;
     color: #141414cf;
-    font-family: 'Roboto Condensed', sans-serif;
+    
+    font-family: 'Devroye-Sc';
 
   }
