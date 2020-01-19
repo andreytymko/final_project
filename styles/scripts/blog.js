@@ -1,21 +1,11 @@
 let comments = [];
 loadComments();
-let commentName = document.querySelector('.comment-name');
-let commentBody = document.querySelector('.comment-body');
 
 document.querySelector('.comment-add').onclick = function(){
-    if (commentName.value.length==0){
-        document.querySelector(".falseName").innerHTML="*данное поле обязательно для заполнения";
-        return false;
-     }
+    location.reload()
 
-     if (commentBody.value.length==0){
-        document.querySelector("falseBody").innerHTML="*данное поле обязательно для заполнения";
-        return false;
-     }
-    
-    // location.reload()
-    
+    let commentName = document.querySelector('.comment-name');
+    let commentBody = document.querySelector('.comment-body');
 
     let comment = {
         name : commentName.value,
@@ -42,10 +32,10 @@ function loadComments(){
 }
 
 function showComments (){   
-   
+
     let commentField = document.querySelector('.commentsOutput');
     let wrapper = document.createElement('div');
-    
+
     // let out = '';
     comments.forEach(function(item){
         let timeBlock = document.createElement('div');
@@ -55,9 +45,9 @@ function showComments (){
         
           let info = document.createElement('div');
 
-        // let p1 = document.createTextNode(timeConverter(item.time));
-        // let p2 = document.createTextNode(item.name);
-        // let p3 = document.createTextNode(item.body);
+        let p1 = document.createTextNode(timeConverter(item.time));
+        let p2 = document.createTextNode(item.name);
+        let p3 = document.createTextNode(item.body);
 
         // out+=p1;
         // out+=p2;
@@ -81,6 +71,7 @@ function showComments (){
         info.appendChild(timeBlock);
 
         // wrapper.appendChild(nameBlock);
+        wrapper.classList.add("containerForComments")
         // commentField.appendChild(bodyBlock)
         // commentField.appendChild(bodyBlock)
               wrapper.appendChild(info);
@@ -88,8 +79,7 @@ function showComments (){
 
     });      
 
-            wrapper.classList.add("containerForComments")
-
+    
         commentField.appendChild(wrapper)
 
 
@@ -114,7 +104,3 @@ function timeConverter(UNIX_timestamp){
     let time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
     return time;
   }
-
-
-//   Проверка формы
-

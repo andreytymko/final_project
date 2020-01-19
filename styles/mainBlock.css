@@ -51,11 +51,14 @@
 .mainInfo h1{
     padding-top:30px;
     font-size: 40px;
+    text-shadow: 1px 2px 3px #000000;
 }
 .mainInfo h2{
     font-size: 25px;
     padding: 30px 0;
+
 }
+
 .mainInfo h4{
     padding-bottom: 30px;
     
@@ -75,6 +78,11 @@
 
 .myphoto img {
     max-width: 500px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3),
+            -23px 0 20px -23px rgba(0, 0, 0, .6),
+            23px 0 20px -23px rgba(0, 0, 0, .6),
+            inset 0 0 40px rgba(0, 0, 0, .1);
+
 }
 .listOfSkills{
     text-align: justify;

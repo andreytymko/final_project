@@ -74,6 +74,7 @@ sup{
     border-radius: 10px;
     font-size: 12px;
     font-weight: bold;
+    box-shadow: 0px 0px 5px 5px pink;
     
 }
 .price-kids-img{

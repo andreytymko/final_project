@@ -1,5 +1,9 @@
-
-
+// $("#menu-icon").on("click", function(){
+// 	$("nav").slideToggle();
+// 	$(this).toggleClass("active");
+// 	});
+	
+// let nav = document.querySelector('nav');
 document.querySelector('#menu-icon').onclick = function(){
 	display = document.querySelector('nav').style.display;
 	if(display == 'none'){
@@ -11,7 +15,25 @@ document.querySelector('#menu-icon').onclick = function(){
 		this.classList.remove('active');
 
 	}
-}
+	
+};
+// document.querySelector('#menu-icon').onclick = function(){
+// 	if(nav.style.display = 'block'){
+// 		nav.style.display = 'none';
+// 		this.classList.remove('active');
+// 	}	
+// if(nav.style.display = 'none'){
+// 	nav.style.display = 'block';
+// }
+
+// if(nav.style.display = 'none'){
+// 	nav.style.display = 'block';
+// }
+
+// this.classList.add('active');
+// };
+
+
 
 let input,search,pr,result,result_arr, locale_HTML, result_store;
 

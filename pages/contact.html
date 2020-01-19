@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Контаткты</title>
     <link rel="stylesheet" href="/styles/main.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 
 
@@ -75,7 +74,8 @@
 
 <div class="container">
   <div class="contacts">
-    <div class="form">
+    <
+      div class="form">
       <!-- <form action="form.php">
 
         Name:<br>
@@ -97,46 +97,60 @@
        
        </form> -->
        <h2>Форма обратной связи</h2>
-        <form name="MyForm" action="/mail.php" method="post" class="form-main">
+        <form name="MyForm" action="/mail.php" method="post" class="form-main"  onsubmit="return validate()">
         <div class="inline">
           <p>Имя*</p>
-          <p><input class="input" name="name" type="text" maxlength="15" placeholder="Андрей"/> </p>
-      </div>
+          <p><input class="name" name="name" type="text" minlength="3" maxlength="15" placeholder="Андрей" pattern="[А-Яа-яA-Za-z]{3-15}" required /> </p>
+          <span class="fName"></span>
+        </div>
       <div class="inline">
         <p>Номер телефона*</p>
-        <p><input class="input" name="email" id='tel' type="text" value='+380' /> </p>
+        <p><input class="input" name="email" maxlength="13"  pattern="[+][3][8][0][0-9]{9}" class='tel' type="text" value='+380'  required /> </p>
       </div>
       <div class="inline">
-        <p>Тема письма</p>
-        <p> <input class="input" name="sub" type="text" maxlength='20'  placeholder="Тема письма"/> </p>
+        <p>Тема письма*</p>
+        <p> <input class="input" name="sub" type="text" class="subject" maxlength='20'  placeholder="Название услуги" required/> </p>
       </div>
       <div class="inline">
-        <p>Ваш комантарий</p>
-        <p><br /><input name="body" id="comment" max="200" type='text' value='' placeholder="Коментарий к заказу"></input></p>
+        <p>Выберите дату*</p>
+        <p><br /><input name="date" class="date"  type='date'   required></input></p>
+      </div>
+      <div class="inline">
+        <p>Ваш комантарий*</p>
+        <p><br /><input name="body" id="comment"minlength='10' max="200" type='text' value='' placeholder="Коментарий к заказу" required></input></p>
       </div>
       <div id="counter"></div>
-        <p><input id="submit" value="Отправить" type="submit" /></p>
-</form>
-    </div>
+      <p><input id="submit" value="Отправить" type="submit" /></p>
+      </form>
+    </
+    div>
     <div class="contact-info">
       <div class="social">
         <h3>Социальные сети</h3>
         <div class="social-items">
-          <div class="inst"><a href="#"><img src="/images/icon_Instagram.png" alt=""></a></div>
-          <div class="facebook"><a href="#"><img src="/images/icon_Facebook.png" alt=""></a></div>
-          <div class="linked"><a href="#"><img src="/images/icon_Linked (1).png" alt=""></a></div>
-          <div class="twitt"><a href="#"><img src="/images/icon_Twitt.png" alt=""></a></div>
-          <div class="youtube"><a href="#"><img src="/images/icon_YouTube.png" alt=""></a></div>
+          <div class="inst"><a href="https://www.instagram.com/andrey_tmk/" target = 'blank'><img src="/images/icon_Instagram.png" alt=""></a></div>
+          <div class="facebook"><a href="https://www.facebook.com/profile.php?id=100009540593812&ref=bookmarks " target="blank"><img src="/images/icon_Facebook.png" alt=""></a></div>
+          <div class="linked"><a href="https://www.linkedin.com/" target="blank"><img src="/images/icon_Linked (1).png" alt=""></a></div>
+          <div class="twitt"><a href="https://twitter.com/?lang=ru" target="blank"><img src="/images/icon_Twitt.png" alt=""></a></div>
+          <div class="youtube"><a href="https://www.youtube.com/" target="blank"><img src="/images/icon_YouTube.png" alt=""></a></div>
 
         </div>
       </div>
       <div class="phone">
         <h3>Телефон</h3>
         <div class="phone-info">
-        <div class="number"><a href="tel:+38(098)786-66-42">+38(098)786-66-42</a></div>
-        <div class="number"><a href="tel:+38(066)088-39-69">+38(066)088-39-69</a></div>
-        <div class="number"><a href="tel:+38(093)693-03-23">+38(093)693-03-23</a></div>
+          <div><img src="/images/icon-phone.png" alt=""></div>
+          <div class="number"><a href="tel:+38(098)786-66-42">+38(098)786-66-42</a></div>
         </div>
+        <div class="phone-info">
+          <div><img src="/images/icon-phone.png" alt=""></div>
+          <div class="number"><a href="tel:+38(066)088-39-69">+38(066)088-39-69</a></div>
+        </div>
+        <div class="phone-info">
+          <div><img src="/images/icon-phone.png" alt=""></div>
+          <div class="number"><a href="tel:+38(093)693-03-23">+38(093)693-03-23</a></div>
+        </div>
+
       </div>
       <div class="adress">
         <h3> Адресс</h3>
@@ -162,12 +176,12 @@
       </div>
       <div class="workday">
         <h3>Поделись с друзьями</h3>
-        <div id="fb-root"></div>
-	
-        <a href="https://twitter.com/share" class="twitter-share-button" 
-        data-lang="ru">Твитнуть</a>
-        
-        <!-- Your share button code -->
+        <div class="share-info">
+          <div id="fb-root"></div>
+          <div><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ru">Твитнуть</a></div>
+        </div>
+          <!-- Your share button code -->
+
         <div class="fb-share-button" 
           data-href="https://dariyakirilenko.000webhostapp.com/index.html" 
           data-layout="button_count">
@@ -218,11 +232,11 @@
     <a href="tel:+38(098)7866642" class="tel"> +38(098)786-66-42</a>
   </div>
   <div class="footer-social">
-    <div><a href="#"> <img src='/images/icon_Instagram.png'> </a> </div>
-    <div><a href="#"><img src='/images/icon_Facebook.png'></a> </div>
-    <div><a href="#"><img src='/images/icon_YouTube.png'></a> </div>
-    <div><a href="#"><img src='/images/icon_Twitt.png'></a> </div>
-    <div><a href="#"><img src='/images/icon_Linked (1).png'></a> </div>
+    <div><a href="https://www.instagram.com/andrey_tmk/" target = 'blank'> <img src='/images/icon_Instagram.png'> </a> </div>
+    <div><a  href="https://www.facebook.com/profile.php?id=100009540593812&ref=bookmarks " target="blank"><img src='/images/icon_Facebook.png'></a> </div>
+    <div><a href="https://www.linkedin.com/" target="blank"><img src='/images/icon_YouTube.png'></a> </div>
+    <div><a href="https://twitter.com/?lang=ru" target="blank"><img src='/images/icon_Twitt.png'></a> </div>
+    <div><a href="https://www.youtube.com/" target="blank"><img src='/images/icon_Linked (1).png'></a> </div>
   
   </div>
   <div class="footer-author">

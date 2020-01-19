@@ -46,8 +46,16 @@
     margin-bottom: 10px;
     width: 350px;
     height: 40px;
+    border-radius: 5px;
     border: 1px solid rgba(128, 128, 128, 0.245);
 
+}
+.falseName{
+    color: red;
+    position: relative;
+    font-size: 13px;
+    bottom: 10px;
+    right: 50px;
 }
 .comment-body{
     margin-bottom: 15px;
