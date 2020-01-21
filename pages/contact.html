@@ -11,6 +11,7 @@
 
 </head>
 <body>
+  <header>
     <div class="header">
         <div id="menu-icon">
           <span class="first"></span>
@@ -74,8 +75,7 @@
 
 <div class="container">
   <div class="contacts">
-    <
-      div class="form">
+    <div class="form">
       <!-- <form action="form.php">
 
         Name:<br>
@@ -97,7 +97,7 @@
        
        </form> -->
        <h2>Форма обратной связи</h2>
-        <form name="MyForm" action="/mail.php" method="post" class="form-main"  onsubmit="return validate()">
+        <form name="MyForm" action="/mail.php " method="post" class="form-main"  onsubmit="return validate()">
         <div class="inline">
           <p>Имя*</p>
           <p><input class="name" name="name" type="text" minlength="3" maxlength="15" placeholder="Андрей" pattern="[А-Яа-яA-Za-z]{3-15}" required /> </p>
@@ -105,32 +105,31 @@
         </div>
       <div class="inline">
         <p>Номер телефона*</p>
-        <p><input class="input" name="email" maxlength="13"  pattern="[+][3][8][0][0-9]{9}" class='tel' type="text" value='+380'  required /> </p>
+        <p><input  name="tel" maxlength="13"  pattern="[+][3][8][0][0-9]{9}" class='tel' type="text" value='+380'  required /> </p>
       </div>
       <div class="inline">
-        <p>Тема письма*</p>
-        <p> <input class="input" name="sub" type="text" class="subject" maxlength='20'  placeholder="Название услуги" required/> </p>
+        <p>Желаемая услуга *</p>
+        <p> <input  name="sub" type="text" class="subject" maxlength='20'  placeholder="Название услуги" required/> </p>
       </div>
       <div class="inline">
         <p>Выберите дату*</p>
-        <p><br /><input name="date" class="date"  type='date'   required></input></p>
+        <p><input name="date" class="date"  type='date'  min="2020-01-01" max="2020-12-31" required></p>
       </div>
       <div class="inline">
         <p>Ваш комантарий*</p>
-        <p><br /><input name="body" id="comment"minlength='10' max="200" type='text' value='' placeholder="Коментарий к заказу" required></input></p>
+        <p><input name="body" id="comment" minlength='10' max="200" type='text' value='' placeholder="Коментарий к заказу" required></p>
       </div>
       <div id="counter"></div>
       <p><input id="submit" value="Отправить" type="submit" /></p>
       </form>
-    </
-    div>
+    </div>
     <div class="contact-info">
       <div class="social">
         <h3>Социальные сети</h3>
         <div class="social-items">
           <div class="inst"><a href="https://www.instagram.com/andrey_tmk/" target = 'blank'><img src="/images/icon_Instagram.png" alt=""></a></div>
-          <div class="facebook"><a href="https://www.facebook.com/profile.php?id=100009540593812&ref=bookmarks " target="blank"><img src="/images/icon_Facebook.png" alt=""></a></div>
-          <div class="linked"><a href="https://www.linkedin.com/" target="blank"><img src="/images/icon_Linked (1).png" alt=""></a></div>
+          <div class="facebook"><a href="https://www.facebook.com/profile.php?id=100009540593812&ref=bookmarks " target="blank" ><img src="/images/icon_Facebook.png" alt=""></a></div>
+          <div class="linked"><a href="https://www.linkedin.com/" target="blank"><img src="/images/icon_Linked.png" alt=""></a></div>
           <div class="twitt"><a href="https://twitter.com/?lang=ru" target="blank"><img src="/images/icon_Twitt.png" alt=""></a></div>
           <div class="youtube"><a href="https://www.youtube.com/" target="blank"><img src="/images/icon_YouTube.png" alt=""></a></div>
 
@@ -232,11 +231,11 @@
     <a href="tel:+38(098)7866642" class="tel"> +38(098)786-66-42</a>
   </div>
   <div class="footer-social">
-    <div><a href="https://www.instagram.com/andrey_tmk/" target = 'blank'> <img src='/images/icon_Instagram.png'> </a> </div>
-    <div><a  href="https://www.facebook.com/profile.php?id=100009540593812&ref=bookmarks " target="blank"><img src='/images/icon_Facebook.png'></a> </div>
-    <div><a href="https://www.linkedin.com/" target="blank"><img src='/images/icon_YouTube.png'></a> </div>
-    <div><a href="https://twitter.com/?lang=ru" target="blank"><img src='/images/icon_Twitt.png'></a> </div>
-    <div><a href="https://www.youtube.com/" target="blank"><img src='/images/icon_Linked (1).png'></a> </div>
+    <div><a href="https://www.instagram.com/andrey_tmk/" target = 'blank'> <img src='/images/icon_Instagram.png' alt="">  </a> </div>
+    <div><a  href="https://www.facebook.com/profile.php?id=100009540593812&ref=bookmarks " target="blank"><img src='/images/icon_Facebook.png' alt=""></a> </div>
+    <div><a href="https://www.linkedin.com/" target="blank"><img src='/images/icon_YouTube.png' alt=""></a> </div>
+    <div><a href="https://twitter.com/?lang=ru" target="blank"><img src='/images/icon_Twitt.png' alt=""></a> </div>
+    <div><a href="https://www.youtube.com/" target="blank"><img src='/images/icon_Linked.png' alt=""></a> </div>
   
   </div>
   <div class="footer-author">
@@ -246,7 +245,7 @@
 
 <script src="/scripts/form.js"></script>
 <script src="/scripts/share.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBThNuuBmrPxL7rT9dQBh0d8WXh7ENh2tY&callback=initMap"async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBThNuuBmrPxL7rT9dQBh0d8WXh7ENh2tY&callback=initMap" async defer></script>
 
 <script src="/scripts/search.js"></script>
 <script src="/scripts/main.js"></script>

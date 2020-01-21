@@ -1,5 +1,6 @@
 let comments = [];
 loadComments();
+showComments();
 let commentName = document.querySelector('.comment-name');
 let commentBody = document.querySelector('.comment-body');
 
@@ -14,7 +15,7 @@ document.querySelector('.comment-add').onclick = function(){
         return false;
      }
     
-    // location.reload()
+    location.reload()
     
 
     let comment = {
@@ -28,7 +29,7 @@ document.querySelector('.comment-add').onclick = function(){
 
     comments.push(comment);
     saveComments();
-    showComments();
+    loadComments();
 }
 
 function saveComments(){
@@ -37,10 +38,9 @@ function saveComments(){
 
 function loadComments(){
     if (localStorage.getItem('comments')) comments = JSON.parse(localStorage.getItem('comments'));
-    showComments();
+    // showComments();
 
 }
-
 function showComments (){   
    
     let commentField = document.querySelector('.commentsOutput');
@@ -70,8 +70,10 @@ function showComments (){
         let name = document.createTextNode(item.name);
         let body = document.createTextNode(item.body);
         
+      
+
         timeBlock.appendChild(time);
-        timeBlock.classList.add('timeBlock');
+        timeBlock.classList.add('timeBlock');        
         nameBlock.appendChild(name);
         nameBlock.classList.add('nameBlock');
         bodyBlock.appendChild(body);
@@ -85,10 +87,27 @@ function showComments (){
         // commentField.appendChild(bodyBlock)
               wrapper.appendChild(info);
             wrapper.appendChild(bodyBlock);
+            wrapper.classList.add("containerForComments");
+            let del = document.createElement('div');
+            bodyBlock.appendChild(del);
 
+            // document.querySelector('.admin').onclick = function(){
+                del.classList.add('del');
+
+            
+                del.onclick = function(){
+
+                    info.parentNode.removeChild(info);
+                    bodyBlock.parentNode.removeChild(bodyBlock);
+                    comments.shift();}
+
+                let admin = document.querySelector('.admin');
+
+
+            // }
+            
     });      
-
-            wrapper.classList.add("containerForComments")
+    
 
         commentField.appendChild(wrapper)
 
@@ -117,4 +136,5 @@ function timeConverter(UNIX_timestamp){
 
 
 //   Проверка формы
+
 

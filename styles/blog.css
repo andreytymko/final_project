@@ -66,6 +66,20 @@
 
 
 }
+.del {
+    /* display: none; */
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 405px;
+    bottom: 15px;
+    background-image: url(/images/close.png);
+
+    background-size: cover;
+}
+del:hover{
+    cursor: pointer;
+}
 
 .comment-add{
     width: 100px;

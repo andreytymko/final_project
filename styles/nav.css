@@ -94,6 +94,7 @@ nav li{
 nav .dropdown{
 
     position:relative;
+    top: 3px;
 }
 nav li a{
     display: inline-block;

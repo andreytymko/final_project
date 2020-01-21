@@ -405,7 +405,7 @@
 @media all and (max-width:600px){
     .mainInfo{
         position: relative;
-        bottom: 29  0px;
+        bottom: 29 px;
     }
     .myphoto img {
         width: 300px;

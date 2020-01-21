@@ -84,17 +84,23 @@
     justify-content: center;
     align-items:center;
     padding-bottom: 10px;
+    padding-top: 10px;
 }
+.date{
+    position: relative;
+    top: 4px;
+}
+
 .inline input{
     width: 250px;
     height: 30px;
     border-radius: 7px;
 }
-input:valid{
+.form-main input:valid{
     border: 1px dotted green;
     box-shadow: 0px 0px 2px 1px green;
 }
-input:invalid{
+.form-main input:invalid{
     border: 1px dotted red;
     box-shadow: 0px 0px 2px 1px red;
 

@@ -1,15 +1,15 @@
 
 document.querySelector('#price-up').onclick = function(){
-    mySort('price');
+    mySort('data-price');
 }
 document.querySelector('#price-down').onclick = function(){
-    mySortDesc('price');
+    mySortDesc('data-price');
 }
 document.querySelector('#popular').onclick = function(){
-    mySortDesc('popul');
+    mySortDesc('data-popul');
 }
 document.querySelector('#time').onclick = function(){
-    mySortDesc('time');
+    mySortDesc('data-time');
 }
 // document.querySelector('#sort-desc').onclick = mySortDesc;
 

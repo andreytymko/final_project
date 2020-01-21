@@ -1,5 +1,5 @@
 /* @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap&subset=cyrillic'); */
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap'); */
 @import url('slider.css');
 @import url('nav.css');
 @import url('mainBlock.css');
@@ -19,8 +19,9 @@
 @font-face{
   font-family: 'Blogger-Italic';
   src: url("/font/Blogger-Italic.otf") format("opentype"); }
-
-
+@font-face{
+  font-family: 'AmaticSC';
+  src: url("/font/AmaticSC.ttf") format("opentype"); }
 *{
     box-sizing:border-box;
     margin:0;
