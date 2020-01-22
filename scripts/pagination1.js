@@ -36,6 +36,7 @@ let portfolioArray =[
     { image: 'url(/images/portfolio10.jpg',header:'Bride and Groom', content:'The western part of the Pont de Bir-Hakeim seen at night. Buildings of the 16th arrondissement of Paris are visible in the background'},
     
     ]
+
     let portfolio = document.querySelector('.imageGrid');
     let pagination1 = document.querySelector('.pagination1');
     

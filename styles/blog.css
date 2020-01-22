@@ -1,10 +1,186 @@
+
+
+
+.closeIcon{
+  width: 100%;
+  display: grid;
+  justify-content: center
+}
+.postItem {
+  font-family: 'Open Sans', Arial, sans-serif;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  padding-bottom: 10px;
+
+  overflow: hidden;
+  margin: 40px 1%;
+  min-width: 600px;
+  max-width: 890px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: left;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.more{
+  font-size: 12px;
+  margin-bottom: 10px;
+  border-bottom: 1px dashed rgba(0, 64, 255, 0.667);
+  color: rgba(0, 64, 255, 0.667);
+}
+.more:hover{
+  cursor: pointer;
+}
+
+.postItem:after {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 25px 0 25px 25px;
+  border-color: transparent transparent transparent #d2652d;
+  content: '';
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.postItem img {
+  width: 100%;
+  position: relative;
+}
+
+.postItem .textBlog {
+  padding: 20px 20px 30px;
+  background-color: #ffffff;
+}
+
+.postItem .date {
+  background-color: #d2652d;
+  top: 15px;
+  color: #fff;
+  right:  15px;
+  height: 48px;
+  width: 48px;
+  position: absolute;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-radius: 50%;
+  padding: 10px 0;
+}
+
+.postItem .date span {
+  display: block;
+  line-height: 14px;
+}
+
+.postItem .date .month {
+  font-size: 11px;
+}
+
+.postItem h2,
+.postItem p {
+  margin: 0;
+  padding: 0;
+}
+
+.postItem h2 {
+  margin-bottom: 10px;
+  /* display: inline-block; */
+  font-weight: 700;
+}
+
+.postItem p {
+  font-size: 13px;
+  margin-bottom: 20px;
+  line-height: 22x;
+}
+
+.postItem .commentPost {
+  padding: 0 25px;
+  color: #999999;
+  font-size: 13px;
+  line-height: 30px;
+  text-align: left;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: auto;
+}
+
+.postItem .commentPost > div {
+  display: inline-block;
+  margin-right: 15px;
+}
+.writeComment{
+  margin-top: 10px;
+}
+.writeComment:hover{
+  cursor: pointer;
+}
+
+.postItem:hover:after,
+.postItem.hover:after {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+
+/* Demo purposes only */
+
+/* pagination */
+.pagination1{
+  margin-bottom: 30px;
+  height: 50px;
+  padding-top: 20px;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  }
+  .pagination1 li
+  {
+  padding:5px 10px;
+  border: 1px solid grey;
+  
+  }
+  .pagination1 li:hover,.pagination1 li.active{
+  cursor: pointer;
+  border: 1px solid red;
+  color: red;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
 .blog-container{
-    background: #fafafa;
+    /* background: #fafafa; */
     border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0 4px 2px -2px;
+    /* box-shadow: rgba(0, 0, 0, 0.2) 0 4px 2px -2px; */
     font-weight: 100;
-    margin: 48px auto;
-    width: 50em;
+    /* margin: 18px auto; */
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    
 }
 .blog-container a:hover{
     border-color: #ff4d4d;
@@ -14,22 +190,21 @@
 /* .blog-header{
     width: 100%;
 } */
-.blog-image{
+/* .blog-image{
     width: 100%;
     height: 200px;
     background-image: url(/images/main_portfolio/wedding1.jpg);
     background-size: cover;
     border-radius: 5px 5px 0 0;
     box-shadow: inset rgba(0, 0, 0, 0.2) 0 64px 64px 16px;
-}
+} */
 .commentsInput{
     display: grid;
     justify-content: center;
 }
 
 .block-name,
-.block-body,
-.block-add{
+.block-body{
     display: grid;
     justify-content: center;
     width: 350px;
@@ -40,6 +215,7 @@
 .block-add{
     justify-content: left;
     text-align: left;
+    
 
 }
 .comment-name{
@@ -86,6 +262,7 @@ del:hover{
     height: 30px;
     background-color: rgb(96, 188, 235);
     border: 0px;
+    
 }
 .comment-add:hover{
     cursor: pointer;
@@ -116,4 +293,41 @@ del:hover{
     margin-bottom: 40px;
     border: 1px solid grey;
     background-color: rgba(205, 221, 220, 0.626);
+}
+
+
+
+@media all and (max-width:700px){
+    .postItem{
+        max-width: 300px;
+        min-width: 220px;
+    }
+}
+@media all and (max-width:500px){
+    
+    .bodyBlock{
+        width: 250px;
+    }
+    .block-name,.block-body,.comment-name,.comment-body{
+        width: 200px;
+    }
+    .del{
+        position: relative;
+        left: 255px;
+        bottom: 15px;
+    }
+    .falseName{
+        position: relative;
+        right: 25px;
+    }
+    .block-add{
+        margin-left: 50px;
+        /* display: none; */
+    }
+    .postItem{
+        max-width: 250px;
+        min-width: 220px;
+    }
+
+    
 }
