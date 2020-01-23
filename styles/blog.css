@@ -1,6 +1,4 @@
-
-
-
+/* -----posts ----- */
 .closeIcon{
   width: 100%;
   display: grid;
@@ -13,7 +11,6 @@
   grid-template-columns: auto;
   justify-content: center;
   padding-bottom: 10px;
-
   overflow: hidden;
   margin: 40px 1%;
   min-width: 600px;
@@ -23,7 +20,7 @@
   color: #000000;
   text-align: left;
   font-size: 16px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.15);
 }
 
 .more{
@@ -43,18 +40,18 @@
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 25px 0 25px 25px;
+  border-width: 25px 25px 25px 25px;
   border-color: transparent transparent transparent #d2652d;
   content: '';
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
   -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  transition: all .4s ease;
 }
 
 .postItem img {
   width: 100%;
-  position: relative;
+  /* position: relative; */
 }
 
 .postItem .textBlog {
@@ -64,12 +61,12 @@
 
 .postItem .date {
   background-color: #d2652d;
+  position: absolute;
   top: 15px;
-  color: #fff;
   right:  15px;
+  color: #fff;
   height: 48px;
   width: 48px;
-  position: absolute;
   text-align: center;
   font-size: 18px;
   font-weight: 800;
@@ -87,55 +84,27 @@
   font-size: 11px;
 }
 
-.postItem h2,
-.postItem p {
-  margin: 0;
-  padding: 0;
-}
-
 .postItem h2 {
   margin-bottom: 10px;
-  /* display: inline-block; */
   font-weight: 700;
 }
 
 .postItem p {
-  font-size: 13px;
+  font-size: 14px;
   margin-bottom: 20px;
-  line-height: 22x;
+  line-height: 20px;
 }
 
 .postItem .commentPost {
   padding: 0 25px;
-  color: #999999;
-  font-size: 13px;
   line-height: 30px;
   text-align: left;
   position: absolute;
   bottom: 0;
   left: 0;
-  width: auto;
-}
-
-.postItem .commentPost > div {
-  display: inline-block;
-  margin-right: 15px;
-}
-.writeComment{
-  margin-top: 10px;
-}
-.writeComment:hover{
-  cursor: pointer;
-}
-
-.postItem:hover:after,
-.postItem.hover:after {
-  -webkit-transform: translateX(0%);
-  transform: translateX(0%);
 }
 
 
-/* Demo purposes only */
 
 /* pagination */
 .pagination1{
@@ -158,46 +127,8 @@
   color: red;
   }
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-.blog-container{
-    /* background: #fafafa; */
-    border-radius: 5px;
-    /* box-shadow: rgba(0, 0, 0, 0.2) 0 4px 2px -2px; */
-    font-weight: 100;
-    /* margin: 18px auto; */
-    width: 100%;
-    display: grid;
-    justify-content: center;
-    
-}
-.blog-container a:hover{
-    border-color: #ff4d4d;
-    color: #ff4d4d;
-
-}
-/* .blog-header{
-    width: 100%;
-} */
-/* .blog-image{
-    width: 100%;
-    height: 200px;
-    background-image: url(/images/main_portfolio/wedding1.jpg);
-    background-size: cover;
-    border-radius: 5px 5px 0 0;
-    box-shadow: inset rgba(0, 0, 0, 0.2) 0 64px 64px 16px;
-} */
+/* ----  comments---- */
+/* ----comments input---- */
 .commentsInput{
     display: grid;
     justify-content: center;
@@ -242,6 +173,15 @@
 
 
 }
+
+.close{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 30px;
+    background-image: url(/images/close.png);
+    background-size: cover;
+}
 .del {
     /* display: none; */
     width: 20px;
@@ -253,7 +193,8 @@
 
     background-size: cover;
 }
-del:hover{
+.del:hover,
+.close:hover{
     cursor: pointer;
 }
 
@@ -262,7 +203,6 @@ del:hover{
     height: 30px;
     background-color: rgb(96, 188, 235);
     border: 0px;
-    
 }
 .comment-add:hover{
     cursor: pointer;
@@ -272,6 +212,7 @@ del:hover{
     display: grid;
     justify-content: center;
 }
+
 .infoBlock{
     display: flex;
     justify-content: space-between;
@@ -288,46 +229,10 @@ del:hover{
 }
 .bodyBlock{
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     width: 400px;
     margin-bottom: 40px;
     border: 1px solid grey;
     background-color: rgba(205, 221, 220, 0.626);
 }
 
-
-
-@media all and (max-width:700px){
-    .postItem{
-        max-width: 300px;
-        min-width: 220px;
-    }
-}
-@media all and (max-width:500px){
-    
-    .bodyBlock{
-        width: 250px;
-    }
-    .block-name,.block-body,.comment-name,.comment-body{
-        width: 200px;
-    }
-    .del{
-        position: relative;
-        left: 255px;
-        bottom: 15px;
-    }
-    .falseName{
-        position: relative;
-        right: 25px;
-    }
-    .block-add{
-        margin-left: 50px;
-        /* display: none; */
-    }
-    .postItem{
-        max-width: 250px;
-        min-width: 220px;
-    }
-
-    
-}

@@ -2,6 +2,7 @@
     padding-bottom: 20px;
     font-size: 40px;
 }
+/* ---note for price--- */
 .price-note{
     text-align: left;
     padding-bottom: 50px;
@@ -14,6 +15,7 @@
 sup{
     color: red;
 }
+/* ----sorting---- */
 .sort{
     display: grid;
     grid-template-columns: auto;
@@ -42,6 +44,7 @@ sup{
 .price-note span{
     color: red;
 }
+/* ---blocks with price---- */
 .price-party-img{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -106,20 +109,4 @@ sup{
 
 
 
-
-
-@media all and (max-width:1150px){
-    .main-price-block{
-        grid-template-columns:auto auto ;
-
-    }
-
-}
-@media all and (max-width:670px){
-    .main-price-block{
-        grid-template-columns:auto  ;
-
-    }
-
-}
 

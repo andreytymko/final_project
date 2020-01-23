@@ -5,7 +5,6 @@
 .item{
     width: 100%;
     height: auto;  
-
 }
 .item-header {
     text-align: left;
@@ -15,6 +14,7 @@
 .item-header h1{
     padding-bottom: 15px;
 }
+/* new year photo */
 .newyear-photo-1{
     width: 100%;
     height: 400px;
@@ -178,7 +178,7 @@
     transition: all linear .3s ;
     cursor: pointer;
 }
-/* family */
+/* family photo*/
 .family-photo-1{
     width: 100%;
     height: 400px;
@@ -251,11 +251,6 @@
 }
 
 
-
-
-
-
-
 .price-family-img{
     width: 100%;
     height: 200px;
@@ -271,7 +266,7 @@
     background-size: cover;
 }
 
-/* wedding */
+/* wedding photo*/
 .wedding-photo-1{
     width: 100%;
     height: 400px;
@@ -343,12 +338,6 @@
 
 }
 
-
-
-
-
-
-
 .price-wedding-img{
     width: 100%;
     height: 200px;
@@ -363,7 +352,7 @@
     background-image: url(/images/wedding-price2.jpg);
     background-size: cover;
 }
-/* love */
+/* love photo*/
 .love-photo-1{
     width: 100%;
     height: 400px;
@@ -489,9 +478,8 @@ justify-content: center;}
 }
 
 
-
-
 @media all and (max-width:1000px){
+    /* SERVICE ITEM */
     .container-item{
         padding: 0 5%;
     }
@@ -592,6 +580,7 @@ justify-content: center;}
     
 }
 @media all and (max-width:670px){
+        /* SERVICE ITEM */
     .container-item{
         padding: 0 5%;
     }

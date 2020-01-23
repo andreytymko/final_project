@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Блог</title>
     <link rel="stylesheet" href="/styles/main.css">
-
 </head>
 <body>
   <header>
@@ -49,8 +48,8 @@
               <li class="dropdown">
                 <a href="blog.html" target="_self">Блог</a>
                 <ul>
-                  <li><a href="#">About Version</a></li>
-                  <li><a href="#">About Version</a></li> 
+                  <li><a href="blog.html#posts">Посты</a></li>
+                  <li><a href="blog.html#comments">Комментарии</a></li> 
                 </ul>        
               </li>
               <li>
@@ -60,138 +59,73 @@
                 <a href="contact.html" target="_self">Контаткты</a>
               </li>
           </ul>
-           
         </nav>
-    </div>
-</header>
+      </div>
+  </header>
 
 <div class="main_photo">
-    <img src="/images/main3.jpg" alt="">
+  <img src="/images/main3.jpg" alt="">
 </div>
 <h2 class="main_header"> Блог</h2>
-<!-- <div class="blog-container">
-    <div class="blog-header">
-        <div class="blog-image">
-            
 
-            <img src="/images/main_portfolio/wedding3.jpg" alt="">
+<div class="container" id="posts">
+  <h1>Мой Блог</h1>
+  <button class="adminRoot">Admin</button>
+  <div class="blog-container"></div>
+  <ul class="pagination1"></ul>
+  <div class="commentsBlock">
+    <h1>Коментарии</h1>
+    <button class="admin" >admin</button>
+    <div class="commentsOutput"></div>
+    <div class="time"></div>
+    <div class="name"></div>
+    <div class="body"></div>
+    <h2 id="comments">Оставить комментарий</h2>
+    <div class="commentsInput">
+      <form > 
+        <div class="block-name">
+          <label for="comment-name">Имя:</label>
+          <input type="text"  class="comment-name" id="comment-name" placeholder="Enter your name" required ><span class="falseName" ></span>
         </div>
+        <div class="block-body">
+          <label for="comment-body">Комментарий:</label>
+          <textarea   class="comment-body" id="comment-body" placeholder="comment" required ></textarea><span class="falseBody"></span>
+        </div>
+        <div class="block-add">
+          <button type="submit" class="comment-add" >Опубликовать</button>
+        </div>
+      </form>
     </div>
-    <div class="blog-body">
-        <div class="blog-title">
-            <h1><a href="#">Lorem ipsum dolor sit amet.</a></h1>
-        </div>
-        <div class="blog-text">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi fuga aspernatur sapiente perferendis incidunt voluptas odit in quos, minima reprehenderit officiis! Consectetur nihil veniam eum natus? Temporibus placeat culpa rerum amet, nulla impedit corrupti tempora ratione fugiat veritatis voluptatum inventore.</p>
-        </div>
-        <div class="blog-tags">
-            <ul>
-                <li><a href="">tag1</a></li>
-                <li><a href="">tag2</a></li>
-                <li><a href="">tag3</a></li>
-                <li><a href="">tag4</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="blog-footer">
-        <ul>
-            <li class="publish-date">4 days ago</li>
-        </ul>
-    </div> -->
-    <div class="container">
-      <h1>Мой Блог</h1>
-      <button id="date-up">Click me to sort</button>
-      <div class="blog-container">      </div>
+  </div>
+</div>
 
-
-
-	
-      <ul class="pagination1"></ul>
-
-
-      <div class="commentsBlock">
-        <h1>Коментарии</h1>
-      <button class="admin" >admin</button>
-
-        <div class="commentsOutput"></div>
-        <div class="time"></div>
-        <div class="name"></div>
-        <div class="body"></div>
-
-        <h2 id="comments">Оставить комментарий</h2>
-        <div class="commentsInput">
-
-          <form > 
-
-            <div class="block-name">
-              <label for="comment-name">Имя:</label>
-              <input type="text"  class="comment-name" id="comment-name" placeholder="Enter your name" required ><span class="falseName" ></span>
-            </div>
-
-            <div class="block-body">
-              <label for="comment-body">Комментарий:</label>
-              <textarea   class="comment-body" id="comment-body" placeholder="comment" required ></textarea><span class="falseBody"></span>
-            </div>
-
-            <div class="block-add">
-                    <button type="submit" class="comment-add" >Опубликовать</button>
-            </div>
-          </form>
-        </div>
-        
-        </div>
-        
-      </div>
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <footer class="footer-desktop">
-      <div class="footer-menu">
-        <ul>
-          <li><a href="/index.html">Главная</a></li>
-          <li><a href="service.html">Услуги</a></li>
-          <li><a href="price.html">Цена</a></li>
-          <li><a href="blog.html">Блог</a></li>
-          <li><a href="portfolio.html">Портфолио</a></li>
-          <li><a href="contact.html"> Контакты</a></li>
-        </ul>
-      </div>
-      <div class="footer-number">
-        <a href="tel:+38(098)7866642" class="tel"> +38(098)786-66-42</a>
-      </div>
-      <div class="footer-social">
-        <div><a href="https://www.instagram.com/andrey_tmk/" target = 'blank'> <img src='/images/icon_Instagram.png' alt=""> </a> </div>
-        <div><a  href="https://www.facebook.com/profile.php?id=100009540593812&ref=bookmarks " target="blank"><img src='/images/icon_Facebook.png' alt=""></a> </div>
-        <div><a href="https://www.linkedin.com/" target="blank"><img src='/images/icon_YouTube.png' alt=""></a> </div>
-        <div><a href="https://twitter.com/?lang=ru" target="blank"><img src='/images/icon_Twitt.png' alt=""></a> </div>
-        <div><a href="https://www.youtube.com/" target="blank"><img src='/images/icon_Linked.png' alt=""></a> </div>
-      </div>
-      <div class="footer-author">
-        <h6>Andrii Tymko  2019</h6>
-      </div>
-      </footer>
+<footer class="footer-desktop">
+  <div class="footer-menu">
+    <ul>
+      <li><a href="/index.html">Главная</a></li>
+      <li><a href="service.html">Услуги</a></li>
+      <li><a href="price.html">Цена</a></li>
+      <li><a href="blog.html">Блог</a></li>
+      <li><a href="portfolio.html">Портфолио</a></li>
+      <li><a href="contact.html"> Контакты</a></li>
+    </ul>
+  </div>
+  <div class="footer-number">
+    <a href="tel:+38(098)7866642" class="tel"> +38(098)786-66-42</a>
+  </div>
+  <div class="footer-social">
+    <div><a href="https://www.instagram.com/andrey_tmk/" target = 'blank'> <img src='/images/icon_Instagram.png' alt=""> </a> </div>
+    <div><a  href="https://www.facebook.com/profile.php?id=100009540593812&ref=bookmarks " target="blank"><img src='/images/icon_Facebook.png' alt=""></a> </div>
+    <div><a href="https://www.linkedin.com/" target="blank"><img src='/images/icon_YouTube.png' alt=""></a> </div>
+    <div><a href="https://twitter.com/?lang=ru" target="blank"><img src='/images/icon_Twitt.png' alt=""></a> </div>
+    <div><a href="https://www.youtube.com/" target="blank"><img src='/images/icon_Linked.png' alt=""></a> </div>
+  </div>
+  <div class="footer-author">
+    <h6>Andrii Tymko  2019</h6>
+  </div>
+</footer>
   
-<script src="/scripts/blogSorting.js"></script>
 <script src="/scripts/search.js"></script>
 <script src="/scripts/blog.js"></script>
-<script src="/scripts/main.js"></script>
 </body>
 </html>

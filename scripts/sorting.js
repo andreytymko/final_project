@@ -1,4 +1,4 @@
-
+// ------- sorting with different attributes-------
 document.querySelector('#price-up').onclick = function(){
     mySort('data-price');
 }
@@ -11,9 +11,10 @@ document.querySelector('#popular').onclick = function(){
 document.querySelector('#time').onclick = function(){
     mySortDesc('data-time');
 }
-// document.querySelector('#sort-desc').onclick = mySortDesc;
+
 
 let main  = document.querySelector('.main-price-block');
+// ------increase-----
 function mySort(sortType){
      for(let i = 0;i<main.children.length;i++){
         for(let j = i;j<main.children.length;j++){
@@ -24,7 +25,7 @@ function mySort(sortType){
         }
      }
 }
-
+// --------decrease ---------
 function mySortDesc(sortType){
     for(let i = 0;i<main.children.length;i++){
        for(let j = i;j<main.children.length;j++){
@@ -35,19 +36,7 @@ function mySortDesc(sortType){
        }
     }
 }
+// --------insert before -------
 function insertAfter(elem, refElem){
     return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
 }
-// console.log(main.children);
-// let from = document.querySelector('#from').value;
-// let to = document.querySelector('#to').value;
-// let arr = []
-// document.querySelector('#send').onclick = function filter(){
-//     for(let i=0;i<main.childresendn.length;i++){
-//         if(+main.children[i].getAttribute('price')>from && +main.children[i].getAttribute('price')<to ){
-//         arr.push(+main.children[i]);
-//         console.log(main.children.getAttribute('price'));
-
-//     }
-// }
-// }

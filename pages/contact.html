@@ -6,9 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Контаткты</title>
     <link rel="stylesheet" href="/styles/main.css">
-
-
-
 </head>
 <body>
   <header>
@@ -38,7 +35,6 @@
                 <li><a href="service-family.html">Семейная фотосессия</a></li>
                 <li><a href="service-love.html">Love story фотосессия</a></li> 
                 <li><a href="service-master.html">Мастер класс</a></li> 
-            
               </ul>
             </li>
             <li class="dropdown">
@@ -51,8 +47,8 @@
               <li class="dropdown">
                 <a href="blog.html" target="_self">Блог</a>
                 <ul>
-                  <li><a href="#">About Version</a></li>
-                  <li><a href="#">About Version</a></li> 
+                  <li><a href="blog.html#posts">Посты</a></li>
+                  <li><a href="blog.html#comments">Комментарии</a></li> 
                 </ul>        
               </li>
               <li>
@@ -62,42 +58,21 @@
                 <a href="contact.html" target="_self">Контаткты</a>
               </li>
           </ul>
-           
         </nav>
-    </div>
-</header>
-
-<div class="main_photo">
+      </div>
+    </header>
+    
+  <div class="main_photo">
     <img src="/images/main4.jpg" alt="">
-</div>
-<h2 class="main_header"> Контаткты</h2>
+  </div>
+  <h2 class="main_header"> Контаткты</h2>
 
 
 <div class="container">
   <div class="contacts">
     <div class="form">
-      <!-- <form action="form.php">
-
-        Name:<br>
-       
-        <input type="text" name="name" placeholder="Your Name">
-       
-        <br>
-        Mobile number:
-        <input type="text" id="phone" name="phone" minlength="3" maxlength="15"  size="15">
-        <br>
-        
-        Message:<br>
-       
-        <textarea name="message" placeholder="Your Message Here" rows="6" cols="33"></textarea>
-       
-        <br><br>
-       
-        <input type="submit" value="Submit">
-       
-       </form> -->
-       <h2>Форма обратной связи</h2>
-        <form name="MyForm" action="/mail.php " method="post" class="form-main"  onsubmit="return validate()">
+      <h2>Форма обратной связи</h2>
+      <form name="MyForm" action="/mail.php " method="post" class="form-main"  onsubmit="return validate()">
         <div class="inline">
           <p>Имя*</p>
           <p><input class="name" name="name" type="text" minlength="3" maxlength="15" placeholder="Андрей" pattern="[А-Яа-яA-Za-z]{3-15}" required /> </p>
@@ -121,8 +96,8 @@
       </div>
       <div id="counter"></div>
       <p><input id="submit" value="Отправить" type="submit" /></p>
-      </form>
-    </div>
+    </form>
+  </div>
     <div class="contact-info">
       <div class="social">
         <h3>Социальные сети</h3>
@@ -132,7 +107,6 @@
           <div class="linked"><a href="https://www.linkedin.com/" target="blank"><img src="/images/icon_Linked.png" alt=""></a></div>
           <div class="twitt"><a href="https://twitter.com/?lang=ru" target="blank"><img src="/images/icon_Twitt.png" alt=""></a></div>
           <div class="youtube"><a href="https://www.youtube.com/" target="blank"><img src="/images/icon_YouTube.png" alt=""></a></div>
-
         </div>
       </div>
       <div class="phone">
@@ -149,7 +123,6 @@
           <div><img src="/images/icon-phone.png" alt=""></div>
           <div class="number"><a href="tel:+38(093)693-03-23">+38(093)693-03-23</a></div>
         </div>
-
       </div>
       <div class="adress">
         <h3> Адресс</h3>
@@ -169,9 +142,6 @@
           <div><img src="/images/icon-geoposition.png" alt=""></div>
           <div><a href="#map">Киев,Дарницкий бул., д.1А</a></div>
         </div>
-
-      
-
       </div>
       <div class="workday">
         <h3>Поделись с друзьями</h3>
@@ -179,41 +149,16 @@
           <div id="fb-root"></div>
           <div><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ru">Твитнуть</a></div>
         </div>
-          <!-- Your share button code -->
-
         <div class="fb-share-button" 
           data-href="https://dariyakirilenko.000webhostapp.com/index.html" 
           data-layout="button_count">
         </div>
-      
-        <!-- <h3>Режим работы</h3>
-        <div class="workday-info">
-          <img src="/images/time2.png">
-        <div>пн-сб: 9:00-21:00</div>
-      </div> -->
-      <!-- <a onclick="Share.vkontakte('URL','TITLE','IMG_PATH','DESC')"> {шарь меня полностью}</a>
-      <a onclick="Share.facebook('URL','TITLE','IMG_PATH','DESC')"> {шарь меня полностью}</a>
-      <a onclick="Share.mailru('URL','TITLE','IMG_PATH','DESC')"> {шарь меня полностью}</a>
-      <a onclick="Share.odnoklassniki('URL','DESC')"> {шарь меня полностью}</a>
-      <a onclick="Share.twitter('URL','TITLE')"> {шарь меня полностью}</a> -->
-
-
-      <!-- </div> -->
-
     </div>
   </div>
-
-
 </div>
-
 <div id="map"></div>
 
-
-
 </div>
-
-
-
 
 
 <footer class="footer-desktop">
@@ -246,8 +191,7 @@
 <script src="/scripts/form.js"></script>
 <script src="/scripts/share.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBThNuuBmrPxL7rT9dQBh0d8WXh7ENh2tY&callback=initMap" async defer></script>
-
+<script src="/scripts/geoposition.js"></script>
 <script src="/scripts/search.js"></script>
-<script src="/scripts/main.js"></script>
 </body>
 </html>

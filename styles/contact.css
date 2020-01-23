@@ -1,16 +1,19 @@
-.container{
+/* .container{
     padding-top: 30px;
-}
-/* Шаринг */
+    padding-bottom: 30px;
 
+} */
 
-
+/* -----google map----- */
 #map{ 
     width: 100%;
     height: 400px;
     box-shadow:  0px 0px 5px 3px grey;
+    margin: 50px 0;
+    border-radius: 10px;
 
 }
+/* ----block with contact--- */
 .contact-info a{
     color: black;
 }
@@ -29,12 +32,12 @@
 .contact-info{
     display: flex;
     flex-direction: column;
-    /* grid-template-rows: auto auto auto auto; */
     align-items: center;
     padding-left: 100px;
 
     
 }
+/* -----block with form---- */
 .form{
 
     display: flex;
@@ -46,7 +49,6 @@
 }
 
 
-
 .form-main{
     padding-top: 40px;
 }
@@ -55,14 +57,14 @@
     bottom: 5px;
 }
 #comment{
-    width: 250px;
+    width: 230px;
     height: 70px;
     white-space: pre-wrap;
 }
 #counter{
     font-size: 14px;
     position: relative;
-    left: 200px;
+    left: 180px;
     
 }
 
@@ -85,6 +87,7 @@
     align-items:center;
     padding-bottom: 10px;
     padding-top: 10px;
+    
 }
 .date{
     position: relative;
@@ -92,7 +95,7 @@
 }
 
 .inline input{
-    width: 250px;
+    width: 230px;
     height: 30px;
     border-radius: 7px;
 }
@@ -105,15 +108,13 @@
     box-shadow: 0px 0px 2px 1px red;
 
 }
-/* .input:last-child{
-    border: none;
-} */
+
 .inline input:focus{
     /* border: 0; */
     outline: 0px;
 }
 .inline textarea{
-    width: 250px;
+    width: 230px;
     height: 50px;
     border-radius: 10px;
 }
@@ -122,9 +123,7 @@
     text-align: right;
     padding-right: 10px;
 }
-.container{
-    padding-bottom: 30px;
-}
+/* -----block with contact data------ */
 .social,
 .phone,
 .adress,
@@ -155,20 +154,15 @@
     display: flex;
     flex-direction: row;
 }
-
 .share-info{
     display: inline-block;
-
 }
 .social-items{
     padding-top: 5px;
-    /* padding-left: 20px; */
     display: flex;
     flex-direction: row;
-    /* grid-template-columns: auto auto auto auto auto; */
     justify-content: left;
 
-    /* grid-gap: 10px; */
 }
 .social-items div{
     padding-right: 10px;
@@ -176,50 +170,13 @@
 .social-items div:hover{
     transform: scale(1.1);
 }
-
+/* ------share buttons------- */
 .fb-share-button{
     position: absolute;
-    /* padding-left: 10px; */
-    /* top: 1000px; */
 }
 .twitter-share-button{
-    /* position: absolute; */
+    position: absolute;
     margin-right: 10px;
     
-
-}
-#map{
-    margin: 50px 0;
-    border-radius: 10px;
-}
-@media all and (max-width:1150px){
-    #counter{
-        position: relative;
-        left: 100px;
-    }
-
-    .inline{
-        flex-direction: column;
-    }
-    .inline p:first-child{
-        text-align: center;
-}
-    .contacts{
-        grid-template-columns: auto;
-        grid-template-rows: auto auto;
-        justify-content: center;
-        margin: 30px 0;
-}
-    .form{
-        border-right: none;
-        padding-bottom: 40px;
-        border-bottom: 1px dotted grey;
-        
-    }
-
-    .contact-info{
-        padding-top: 40px;
-        padding-left: 0px;
-}
 
 }

@@ -1,11 +1,4 @@
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-  }
-header{
-    height: auto;
-}
+/* ---main block--- */
 .main-head-photo{
     display: none;
     min-width: 100%;
@@ -14,7 +7,6 @@ header{
     background-repeat: repeat;
     
 }
-
 .mainInfo{
     position: relative;
     bottom: 150px;
@@ -35,19 +27,13 @@ header{
 
 .mainInfo h4{
     padding-bottom: 30px;
-    
 }
 .aboutMe{
     display: grid;
     grid-template-columns: 1fr 1fr ;
     grid-gap: 40px;
-    /* margin:auto 10%; */
-    /* padding:0 10%; */
     padding-bottom: 40px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.687);
-
-    
-
 }
 
 .myphoto img {
@@ -58,6 +44,7 @@ header{
             inset 0 0 40px rgba(0, 0, 0, .1);
 
 }
+
 .listOfSkills{
     text-align: justify;
 }
@@ -72,10 +59,7 @@ header{
     font-size: 25px;
     font-weight:bold;
     position: relative;
-
     top: 40%;
-    /* background-color:rgba(78, 168, 233, 0.68); */
-    
 }
 .service6:hover::after,
 .service8:hover::after{
@@ -139,12 +123,7 @@ header{
     display: none;
     width: 100%;
     height: 700px;
-    /* display: flex; */
     justify-content: center;
-    /* background-image: url(/images/workwithme.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;   */
-     /* margin: auto 10%; */
     padding-bottom: 40px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.687);
 }
@@ -152,10 +131,8 @@ header{
 .cooperation_img{
     width: 620px;
     height: 600px;
-    /* background-image: url(/images/workwithme.jpg); */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
 }
+
 .adv_container{
     width: 100%;
     display: grid;
@@ -188,23 +165,14 @@ header{
 .adv-img1{
     width: 360px;
     height: 240px;
-    /* background-image: url(/images/adv1.jpg);
-    background-size: cover; */
-    /* background-repeat: no-repeat; */
 }
 .adv-img2{
     width: 360px;
     height: 240px;
-    /* background-image: url(/images/adv2.jpg);
-    background-size: cover; */
-    /* background-repeat: no-repeat; */
 }
 .adv-img3{
     width: 360px;
     height: 240px;
-    /* background-image: url(/images/adv3.jpg);
-    background-size: cover; */
-    /* background-repeat: no-repeat; */
 }
 
 .footer-desktop{
@@ -216,10 +184,8 @@ header{
     display: grid;
     grid-template-rows: 1fr  1fr 1fr 1fr;
     justify-content: center;
-    /* color: rgba(22, 20, 20, 0.898); */
-
 }
-
+/* ----footer styles---- */
 .footer-menu {
     text-align: center;
     padding:10px 0;
@@ -273,147 +239,3 @@ header{
 }
 
 
-
-@media all and (max-width:1500px){
-    .main_service{
-        grid-template-columns: auto auto;
-    }
-}
-@media all and (max-width:1400px){
-    .adv{
-        width: 300px;
-        height: 300px;
-    }
-    .adv-img1{
-        width: 280px;
-        height: 187px;
-    }
-    .adv-img2{
-        width: 280px;
-        height: 187px;
-    }
-    .adv-img3{
-        width: 280px;
-        height: 187px;
-    }
-
-}
-@media all and (max-width:1200px){
-    .aboutMe{
-        grid-template-columns: auto;
-        /* margin:auto 28%;  */
-    
-    }
-    
-    .listOfSkills{
-        text-align: justify;
-    }
-     
-}
-@media all and (max-width:960px){
-    .mainInfo{
-        position: relative;
-        bottom: 140px;
-    }
-    .main-head-photo{
-        display: block;
-        position: relative;
-        bottom: 200px;
-        /* height: 520px; */
-        background-repeat: no-repeat;
-    }
-    
-    .whyme{
-        grid-template-columns: auto ;
-    }
-    .adv{
-        width: 280px;
-        height: 280px;
-    }
-    .adv-img1{
-        width: 280px;
-        height: 187px;
-    }
-    .adv-img2{
-        width: 280px;
-        height: 187px;
-    }
-    .adv-img3{
-        width: 280px;
-        height: 187px;
-    }
-}
-
-@media all and (max-width:760px){
-    .mainInfo{
-        position: relative;
-        bottom: 100px;
-    }
-    .main-head-photo{
-        display: none;
-    }
-    .service{
-        width: 200px;
-        height: 150px;
-    }
-    .cooperation{
-        height: 470px;
-    }
-    .cooperation_img{
-        width: 470px;
-        height: 460px;
-    }
-    .footer-menu li{
-        font-size: 10px;
-    }
-    /* .mainInfo{
-        padding-top: 90px;
-    } */
-    /* .whyme{
-        grid-template-columns: auto;
-        width: 200px;
-        height: auto;
-
-        grid-gap: 0px;
-    } */
-}
-
-@media all and (max-width:550px){
-    .mainInfo{
-        position: relative;
-        bottom: 200px;
-        /* padding-bottom: 200px; */
-    }
-    .myphoto img {
-        width: 300px;
-    }
-    .cooperation{
-        display: none;
-    }
-    .remove{
-        display: none;
-    }
-    
-}
-/* @media all and(max-width:545px){
-    .mainInfo{
-        position: relative;
-        bottom: 300px;
-    }
-} */
-@media all and (max-width:450px){
-    /* .listOfSkills{
-        width: 250px;
-    } */
-    .myphoto img {
-        width: 250px;
-    }
-    .service{
-        width: 140px;
-        height: 90px;
-    }
-    
-    .logo a{
-        font-size: 25px;
-    }
-}

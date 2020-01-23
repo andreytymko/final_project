@@ -1,23 +1,8 @@
-
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-  }
-  
-  body {
-    background: #ffffff;
-    font-family:'Devroye';
-    color: #141414cf;
-  }
-  
-  
+  /*---slider----  */
   .slider {
     background:white;
-  
     height:720px;
     width:100%;
-    
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -26,7 +11,6 @@
     
   }
  
-  
   .slider .btnLeft {
     position:absolute;
     top:350px;
@@ -101,12 +85,12 @@
 .hidden {
     display: none;
   }
+  /* ---slider text---- */
 .headertext{
     position: absolute;
     top: 200px;
     left:23%;
     color: rgba(255, 255, 255, 0.3);
-    /* width: 800px; */
     display: flex;
     flex-direction: column;
     
@@ -116,58 +100,10 @@
   .headertext h1{
       padding-bottom: 10px;
       font-size: 7em;
-
-
   }
   .headertext p{
     font-size: 1em;
   }
-.mobileBackImg{
+  .mobileBackImg{
     display: none;
-}
-
-  @media all and (max-width:1300px){
-      .headertext{
-        height: 75px;
-        left: 25%;     }
-      .headertext h1{
-          font-size: 4em;
-      }
-      .headertext p{
-
-        font-size: 1.4em;
-      }
-      .mobileBackImg{
-        display: none;
-    }
-  }
-@media all and (max-width:900px){
-  .headertext{
-    left: 24%;
-  }
-  .headertext h1{
-    font-size: 3em;
-  }
-}
-@media all and (max-width:960px){
-    .slider{
-        display: none;
-    }
-    .mobileBackImg{
-      background-image: url(../images/mobileImage.jpg);
-
-    }
-    .headertext{
-        display: none;
-    }
-}
-
-@media all and (min-width:1600px){
-  .headertext{
-    left: 31%;
-    top:300px;
-  }
-  .slider{
-    height:800px;
-  }
 }

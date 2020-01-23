@@ -1,3 +1,4 @@
+// ------posts----------
 let data = [
     {image:'/images/post1.jpg',header:'Нулевой километр любви',
     par1:'Я не могу сделать так, чтобы жизнь твоя и моя не бежали так быстро, как по небу бегут эти взъерошенные облака, обгоняя друг друга по встречке, как будто куда-то опаздывают. Я не буду тебе сейчас обещать, что твои самые близкие никогда не станут тебе чужее чужих, но я точно знаю, что на твой берег неспокойное море жизни еще не раз вынесет тех, кто будет с тобой до последней его капли. Будет ближе, чем рядом. А больше ты, кажется, ничего и не боишься.  ',
@@ -218,82 +219,75 @@ let data = [
     content:'Я очень люблю чувство, когда все внутри взрывается тысячью фейерверков от прочитанных, подсмотренных или услышанных между делом фраз. Когда всего несколько слов как будто случайно встретились в одном предложении и за пару секунд все расставили по своим местам (или перевернули вверх дном). Я собираю такие фразы, и они всегда и везде со мной - в памяти, в заметках, в почте, подчеркнутые, выделенные, записанные от руки. ',date:'28',month:'Oct'},
  ]
 
-  let doc = document;
-  let container = doc.querySelector('.blog-container')
+let doc = document;
+let container = doc.querySelector('.blog-container')
   
-  function addElement( parent, child, text){
-      let element = doc.createElement(child);
-      parent.appendChild(element);
-      if(text!=null){
-          element.appendChild( doc.createTextNode(text));
-      }
-      
-      return element;
+function addElement( parent, child, text){
+    let element = doc.createElement(child);
+    parent.appendChild(element);
+    if(text!=null){
+        element.appendChild( doc.createTextNode(text));
+    }  
+    return element;
   }
   
-  
-  
-  // pagination
+  // -------pagination--------
   
 
-    let pagination1 = document.querySelector('.pagination1');
+let pagination1 = document.querySelector('.pagination1');
+let notesOnPage = 5;
+let countOfItems = Math.ceil(data.length/notesOnPage);
+console.log(countOfItems);     
+let items = [];
+let li1 = document.createElement('li');
+let first = document.createTextNode('<<');
+li1.appendChild(first);
+pagination1.appendChild(li1);
+items.push(li1);
+for(let i = 1; i<= countOfItems ;i++){
+    let li = document.createElement('li');
+    let number = document.createTextNode(i) ;
+    li.appendChild(number);
+    pagination1.appendChild(li);
+    items.push(li);
+}
       
-      let notesOnPage = 5;
-      let countOfItems = Math.ceil(data.length/notesOnPage);
-      console.log(countOfItems);
-      
-      let items = [];
-      let li1 = document.createElement('li');
-      let first = document.createTextNode('<<');
-      li1.appendChild(first);
-      pagination1.appendChild(li1);
-      items.push(li1);
-      for(let i = 1; i<= countOfItems ;i++){
-          let li = document.createElement('li');
-          let number = document.createTextNode(i) ;
-          li.appendChild(number);
-          pagination1.appendChild(li);
-          items.push(li);
-      }
-      
-      let li2 = document.createElement('li');
-      let last = document.createTextNode('>>');
-      li2.appendChild(last);
-      pagination1.appendChild(li2);
-      items.push(li2);
-      
-      showPage(items[1])
-      for(let item of items){
-          item.addEventListener('click',function(){
-              showPage(this);
-          });
-          
-      }        
-      items[0].onclick = function(){
-          showPage(items[1]);
-      }
-      items[notesOnPage+1].oncli1ck = function(){
-          showPage(items[notesOnPage])
-      }
-      
-      function showPage(unit){
-          let active = document.querySelector('.pagination1 li.active');
-          if(active){
-              active.classList.remove('active');
-          }
-      
-      
-          unit.classList.add('active');
-          let pageNum = +unit.innerHTML;
-          let start =  (pageNum - 1)* notesOnPage;
-          let end = start + notesOnPage;
-          let posts = data.slice(start, end);
-          
-          container.innerHTML = '';    
+let li2 = document.createElement('li');
+let last = document.createTextNode('>>');
+li2.appendChild(last);
+pagination1.appendChild(li2);
+items.push(li2);     
+showPage(items[1])
+for(let item of items){
+    item.addEventListener('click',function(){
+        showPage(this);
+    });         
+}        
+items[0].onclick = function(){
+    showPage(items[1]);
+}
+items[notesOnPage+1].oncli1ck = function(){
+    showPage(items[notesOnPage])
+}      
+function showPage(unit){
+    let active = document.querySelector('.pagination1 li.active');
+    if(active){
+        active.classList.remove('active');
+    }  
+    
+    unit.classList.add('active');
+    let pageNum = +unit.innerHTML;
+    let start =  (pageNum - 1)* notesOnPage;
+    let end = start + notesOnPage;
+    let posts = data.slice(start, end);    
+    container.innerHTML = '';    
    
-     
-      for(let post of posts){
-  
+    let adminRoot = doc.querySelector('.adminRoot')
+    for(let post of posts){
+        let close = addElement(container,'div')
+        let closeImg = addElement(close,'img')
+        closeImg.src= '/images/close.png';
+        closeImg.classList.add('close')
         let divMain = addElement(container,'div');
         divMain.classList.add('postItem');
         divMain.date = post.date;
@@ -330,28 +324,19 @@ let data = [
         let imgComment = addElement(linkComment,'img');
         imgComment.classList.add('writeComment');
         imgComment.src = '/images/icon-comment.png';
-        
-
-        
-        
         moreContent.style.display = 'none';
         moreButton.onclick = function(){
           moreContent.style.display = 'block';
           moreButton.style.display = 'none';
-          }
         }
-        
-  }
+        close.onclick = function(){
+            divMain.style.display = 'none';
+            close.style.display = 'none';            
+        } 
+    }    
+}
 
-
-
-
-// comments
-
-
-
-
-
+// ----------comments----------
 
 let comments = [];
 loadComments();
@@ -363,12 +348,12 @@ document.querySelector('.comment-add').onclick = function(){
     if (commentName.value.length==0){
         document.querySelector(".falseName").innerHTML="*данное поле обязательно для заполнения";
         return false;
-     }
+    }
 
-     if (commentBody.value.length==0){
+    if (commentBody.value.length==0){
         document.querySelector("falseBody").innerHTML="*данное поле обязательно для заполнения";
         return false;
-     }
+    }
     
     location.reload()
     
@@ -393,39 +378,19 @@ function saveComments(){
 
 function loadComments(){
     if (localStorage.getItem('comments')) comments = JSON.parse(localStorage.getItem('comments'));
-    // showComments();
 
 }
 function showComments (){   
-   
     let commentField = document.querySelector('.commentsOutput');
     let wrapper = document.createElement('div');
-    
-    // let out = '';
     comments.forEach(function(item){
         let timeBlock = document.createElement('div');
         let nameBlock = document.createElement('div');
         let bodyBlock = document.createElement('div');
-
-        
-          let info = document.createElement('div');
-
-        // let p1 = document.createTextNode(timeConverter(item.time));
-        // let p2 = document.createTextNode(item.name);
-        // let p3 = document.createTextNode(item.body);
-
-        // out+=p1;
-        // out+=p2;
-        // out+=p3;
-
-        // out += `<p class="text-right small"><em>${timeConverter(item.time)}</em></p>`;
-        // out += `<p class="alert alert-primary" role="alert">${item.name}</p>`;
-        // out += `<p class="alert alert-success" role="alert">${item.body}</p>`;
+        let info = document.createElement('div');
         let time = document.createTextNode(timeConverter(item.time))
         let name = document.createTextNode(item.name);
-        let body = document.createTextNode(item.body);
-        
-      
+        let body = document.createTextNode(item.body); 
 
         timeBlock.appendChild(time);
         timeBlock.classList.add('timeBlock');        
@@ -437,45 +402,22 @@ function showComments (){
         info.appendChild(nameBlock);
         info.appendChild(timeBlock);
 
-        // wrapper.appendChild(nameBlock);
-        // commentField.appendChild(bodyBlock)
-        // commentField.appendChild(bodyBlock)
-              wrapper.appendChild(info);
-            wrapper.appendChild(bodyBlock);
-            wrapper.classList.add("containerForComments");
-            let del = document.createElement('div');
-            bodyBlock.appendChild(del);
+        wrapper.appendChild(info);
+        wrapper.appendChild(bodyBlock);
+        wrapper.classList.add("containerForComments");
+        let del = document.createElement('div');
+        bodyBlock.appendChild(del);
+        del.classList.add('del');
+        del.onclick = function(){
+            info.parentNode.removeChild(info);
+            bodyBlock.parentNode.removeChild(bodyBlock);
+            comments.shift();}
+            document.querySelector('.admin');
+        });      
 
-            // document.querySelector('.admin').onclick = function(){
-                del.classList.add('del');
-
-            
-                del.onclick = function(){
-
-                    info.parentNode.removeChild(info);
-                    bodyBlock.parentNode.removeChild(bodyBlock);
-                    comments.shift();}
-
-                let admin = document.querySelector('.admin');
-
-
-            // }
-            
-    });      
-    
-
-        commentField.appendChild(wrapper)
-
-
-
-
-    console.log(commentField);
-
-    // commentField.innerHTML = out;
-        // console.log(commentField);
-
+    commentField.appendChild(wrapper);
 }
-
+// ------function to convert date-------
 function timeConverter(UNIX_timestamp){
     let a = new Date(UNIX_timestamp * 1000);
     let months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];

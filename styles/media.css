@@ -1,0 +1,408 @@
+
+@media all and (max-width:700px){
+    /* BLOG */
+      .postItem{
+          max-width: 300px;
+          min-width: 220px;
+      }
+  }
+  
+  @media all and (max-width:500px){
+      /* BLOG */
+      .bodyBlock{
+          width: 250px;
+      }
+      .block-name,.block-body,.comment-name,.comment-body{
+          width: 200px;
+      }
+      .del{
+          position: relative;
+          left: 255px;
+          bottom: 15px;
+      }
+      .falseName{
+          position: relative;
+          right: 25px;
+      }
+      .block-add{
+          margin-left: 50px;
+          /* display: none; */
+      }
+      .postItem{
+          max-width: 250px;
+          min-width: 220px;
+      }
+  
+      
+  }
+
+
+  
+@media all and (max-width:1150px){
+    /* CONTACT */
+    #counter{
+        position: relative;
+        left: 100px;
+    }
+    .inline{
+        flex-direction: column;
+    }
+   
+
+    .inline p:first-child{
+        text-align: center;
+    }
+    .contacts{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        justify-content: center;
+        margin: 30px 0;
+    }
+    .form{
+        border-right: none;
+        padding-bottom: 40px;
+        border-bottom: 1px dotted grey;
+        
+    }
+
+    .contact-info{
+        padding-top: 40px;
+        padding-left: 0px;
+    }
+
+}
+
+
+
+@media all and (max-width:1500px){
+    /* MAIN */
+    .main_service{
+        grid-template-columns: auto auto;
+    }
+}
+@media all and (max-width:1400px){
+    /* MAIN */
+    .adv{
+        width: 300px;
+        height: 300px;
+    }
+    .adv-img1{
+        width: 280px;
+        height: 187px;
+    }
+    .adv-img2{
+        width: 280px;
+        height: 187px;
+    }
+    .adv-img3{
+        width: 280px;
+        height: 187px;
+    }
+
+}
+@media all and (max-width:1200px){
+    /* MAIN */
+    .aboutMe{
+        grid-template-columns: auto;
+    }
+    .listOfSkills{
+        text-align: justify;
+    }    
+}
+@media all and (max-width:960px){
+    /* MAIN */
+    .mainInfo{
+        position: relative;
+        bottom: 140px;
+    }
+    .main-head-photo{
+        display: block;
+        position: relative;
+        bottom: 200px;
+        /* height: 520px; */
+        background-repeat: no-repeat;
+    }
+    
+    .whyme{
+        grid-template-columns: auto ;
+    }
+    .adv{
+        width: 280px;
+        height: 280px;
+    }
+    .adv-img1{
+        width: 280px;
+        height: 187px;
+    }
+    .adv-img2{
+        width: 280px;
+        height: 187px;
+    }
+    .adv-img3{
+        width: 280px;
+        height: 187px;
+    }
+}
+
+@media all and (max-width:760px){
+    /* MAIN */
+    .mainInfo{
+        position: relative;
+        bottom: 100px;
+    }
+    .main-head-photo{
+        display: none;
+    }
+    .service{
+        width: 200px;
+        height: 150px;
+    }
+    .cooperation{
+        height: 470px;
+    }
+    .cooperation_img{
+        width: 470px;
+        height: 460px;
+    }
+    .footer-menu li{
+        font-size: 10px;
+    }
+
+}
+
+@media all and (max-width:546px){
+    /* MAIN */
+    .mainInfo{
+        position: relative;
+        bottom: 200px;
+    }
+    .myphoto img {
+        width: 300px;
+    }
+    .cooperation{
+        display: none;
+    }
+    .remove{
+        display: none;
+    }
+    
+}
+@media all and (max-width:450px){
+    /* MAIN */
+    .myphoto img {
+        width: 250px;
+    }
+    .service{
+        width: 140px;
+        height: 90px;
+    }
+    
+    .logo a{
+        font-size: 25px;
+    }
+}
+
+
+
+@media all and (max-width:500px){
+    /* NAV */
+.header{
+    background:rgb(31, 39, 46);
+    margin-bottom: 300px;
+}
+
+
+}
+
+
+@media (max-width: 1000px) {
+    /* PORTFOLIO */
+    .imageGrid .tile {
+      width: 300px;
+    }
+    .main_header{
+        display: none;
+    }
+  }
+   
+  @media all and (max-width:400px){
+      /* PORTFOLIO */
+  
+    .imageGrid .tile{
+     width: 250px;
+     height: 250px;
+    }
+  }
+
+
+
+
+  @media all and (max-width:1150px){
+    /* PRICE */
+    .main-price-block{
+        grid-template-columns:auto auto ;
+
+    }
+
+}
+@media all and (max-width:670px){
+        /* PRICE */
+    .main-price-block{
+        grid-template-columns:auto  ;
+
+    }
+
+}
+
+
+
+@media all and (max-width:1400px){
+    /* SERVICE */
+    .hidden-item{
+        width: 900px;
+        height: 350px;
+    }
+    .service-item{
+        width: 900px;
+        height: 350px;
+    }
+    .service-photo1,
+    .service-photo2,
+    .service-photo3,
+    .service-photo4,
+    .service-photo5{
+        width: 450px;
+        height: 350px;
+
+    }
+    .service-describe{
+        width: 350px;
+        height: 250px;
+    }
+}
+@media all and (max-width:1000px){
+    /* SERVICE */
+    .service-describe{
+        position: relative;
+        bottom: 40px;
+    }
+    .service-about{
+        padding: 20px 0;
+    }
+   
+    .service-item{
+        width: 450px;
+        height: 700px;
+        background-color:  rgba(227, 227, 228, 0.721);
+        display: grid;
+        grid-template-columns: 1fr;
+        border-radius: 10px;
+           
+    }
+    .service-photo1,
+    .service-photo2,
+    .service-photo3,
+    .service-photo4,
+    .service-photo5{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;  
+        border-bottom-left-radius: 0px;      
+
+    }
+    .hidden-item{
+        display: grid;
+    }
+    .visible-item{
+        display: none;
+    }
+}
+@media all and (max-width:500px){
+    /* SERVICE */
+    .service-photo1,
+    .service-photo2,
+    .service-photo3,
+    .service-photo4,
+    .service-photo5{
+        width: 280px;
+        height: 200px;
+
+    }
+    .service-describe{
+        width: 280px;
+        height: 200px;
+        position: initial;
+        justify-content: center;
+        padding-top: 20px;
+        
+    }
+    .service-about{
+        display: none;
+    }
+    .service-header{
+        font-size: 16px;
+    }
+    .service-button{
+        padding-top: 30px;
+    }
+    .service-button a{
+        
+        width: 150px;
+        height: 50px;
+    }
+    .service-item{
+        width: 280px;
+        height: 400px;
+        
+           
+    }
+}
+
+
+@media all and (max-width:1300px){
+    /* SLIDER */
+      .headertext{
+        height: 75px;
+        left: 25%;     }
+      .headertext h1{
+          font-size: 4em;
+      }
+      .headertext p{
+
+        font-size: 1.4em;
+      }
+      .mobileBackImg{
+        display: none;
+    }
+  }
+@media all and (max-width:900px){
+  /* SLIDER */
+  .headertext{
+    left: 24%;
+  }
+  .headertext h1{
+    font-size: 3em;
+  }
+}
+@media all and (max-width:960px){
+  /* SLIDER */
+    .slider{
+        display: none;
+    }
+    .mobileBackImg{
+      background-image: url(../images/mobileImage.jpg);
+    }
+    .headertext{
+        display: none;
+    }
+}
+
+@media all and (min-width:1600px){
+  /* SLIDER */
+  .headertext{
+    left: 31%;
+    top:300px;
+  }
+  .slider{
+    height:800px;
+  }
+}
