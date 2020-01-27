@@ -45,7 +45,10 @@
         left: 100px;
     }
     .inline{
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
    
 
@@ -53,9 +56,13 @@
         text-align: center;
     }
     .contacts{
-        grid-template-columns: auto;
-        grid-template-rows: auto auto;
-        justify-content: center;
+        -ms-grid-columns: auto;
+            grid-template-columns: auto;
+        -ms-grid-rows: auto auto;
+            grid-template-rows: auto auto;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         margin: 30px 0;
     }
     .form{
@@ -77,7 +84,8 @@
 @media all and (max-width:1500px){
     /* MAIN */
     .main_service{
-        grid-template-columns: auto auto;
+        -ms-grid-columns: auto auto;
+            grid-template-columns: auto auto;
     }
 }
 @media all and (max-width:1400px){
@@ -103,7 +111,8 @@
 @media all and (max-width:1200px){
     /* MAIN */
     .aboutMe{
-        grid-template-columns: auto;
+        -ms-grid-columns: auto;
+            grid-template-columns: auto;
     }
     .listOfSkills{
         text-align: justify;
@@ -124,7 +133,8 @@
     }
     
     .whyme{
-        grid-template-columns: auto ;
+        -ms-grid-columns: auto ;
+            grid-template-columns: auto ;
     }
     .adv{
         width: 280px;
@@ -240,7 +250,8 @@
   @media all and (max-width:1150px){
     /* PRICE */
     .main-price-block{
-        grid-template-columns:auto auto ;
+        -ms-grid-columns:auto auto ;
+            grid-template-columns:auto auto ;
 
     }
 
@@ -248,7 +259,8 @@
 @media all and (max-width:670px){
         /* PRICE */
     .main-price-block{
-        grid-template-columns:auto  ;
+        -ms-grid-columns:auto  ;
+            grid-template-columns:auto  ;
 
     }
 
@@ -294,8 +306,10 @@
         width: 450px;
         height: 700px;
         background-color:  rgba(227, 227, 228, 0.721);
+        display: -ms-grid;
         display: grid;
-        grid-template-columns: 1fr;
+        -ms-grid-columns: 1fr;
+            grid-template-columns: 1fr;
         border-radius: 10px;
            
     }
@@ -310,6 +324,7 @@
 
     }
     .hidden-item{
+        display: -ms-grid;
         display: grid;
     }
     .visible-item{
@@ -331,7 +346,9 @@
         width: 280px;
         height: 200px;
         position: initial;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         padding-top: 20px;
         
     }

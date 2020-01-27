@@ -221,7 +221,10 @@ let data = [
 
 let doc = document;
 let container = doc.querySelector('.blog-container')
-  
+
+
+
+
 function addElement( parent, child, text){
     let element = doc.createElement(child);
     parent.appendChild(element);
@@ -234,26 +237,26 @@ function addElement( parent, child, text){
   // -------pagination--------
   
 
-let pagination1 = document.querySelector('.pagination1');
+let pagination1 = doc.querySelector('.pagination1');
 let notesOnPage = 5;
 let countOfItems = Math.ceil(data.length/notesOnPage);
 console.log(countOfItems);     
 let items = [];
-let li1 = document.createElement('li');
-let first = document.createTextNode('<<');
+let li1 = doc.createElement('li');
+let first = doc.createTextNode('<<');
 li1.appendChild(first);
 pagination1.appendChild(li1);
 items.push(li1);
 for(let i = 1; i<= countOfItems ;i++){
-    let li = document.createElement('li');
-    let number = document.createTextNode(i) ;
+    let li = doc.createElement('li');
+    let number = doc.createTextNode(i) ;
     li.appendChild(number);
     pagination1.appendChild(li);
     items.push(li);
 }
       
-let li2 = document.createElement('li');
-let last = document.createTextNode('>>');
+let li2 = doc.createElement('li');
+let last = doc.createTextNode('>>');
 li2.appendChild(last);
 pagination1.appendChild(li2);
 items.push(li2);     
@@ -270,7 +273,7 @@ items[notesOnPage+1].oncli1ck = function(){
     showPage(items[notesOnPage])
 }      
 function showPage(unit){
-    let active = document.querySelector('.pagination1 li.active');
+    let active = doc.querySelector('.pagination1 li.active');
     if(active){
         active.classList.remove('active');
     }  
@@ -281,8 +284,9 @@ function showPage(unit){
     let end = start + notesOnPage;
     let posts = data.slice(start, end);    
     container.innerHTML = '';    
-   
-    let adminRoot = doc.querySelector('.adminRoot')
+       
+
+console.log(data);
     for(let post of posts){
         let close = addElement(container,'div')
         let closeImg = addElement(close,'img')
@@ -315,6 +319,7 @@ function showPage(unit){
         addElement(moreContent,'p',post.par4);
         addElement(moreContent,'p',post.par5);
         
+        
         let commentPost = addElement(divText,'div');
         commentPost.classList.add('commentPost');
         let divComment = addElement(commentPost,'div');
@@ -335,23 +340,22 @@ function showPage(unit){
         } 
     }    
 }
-
 // ----------comments----------
 
 let comments = [];
 loadComments();
 showComments();
-let commentName = document.querySelector('.comment-name');
-let commentBody = document.querySelector('.comment-body');
+let commentName = doc.querySelector('.comment-name');
+let commentBody = doc.querySelector('.comment-body');
 
-document.querySelector('.comment-add').onclick = function(){
+doc.querySelector('.comment-add').onclick = function(){
     if (commentName.value.length==0){
-        document.querySelector(".falseName").innerHTML="*данное поле обязательно для заполнения";
+        doc.querySelector(".falseName").innerHTML="*данное поле обязательно для заполнения";
         return false;
     }
 
     if (commentBody.value.length==0){
-        document.querySelector("falseBody").innerHTML="*данное поле обязательно для заполнения";
+        doc.querySelector("falseBody").innerHTML="*данное поле обязательно для заполнения";
         return false;
     }
     
@@ -381,16 +385,16 @@ function loadComments(){
 
 }
 function showComments (){   
-    let commentField = document.querySelector('.commentsOutput');
-    let wrapper = document.createElement('div');
+    let commentField = doc.querySelector('.commentsOutput');
+    let wrapper = doc.createElement('div');
     comments.forEach(function(item){
-        let timeBlock = document.createElement('div');
-        let nameBlock = document.createElement('div');
-        let bodyBlock = document.createElement('div');
-        let info = document.createElement('div');
-        let time = document.createTextNode(timeConverter(item.time))
-        let name = document.createTextNode(item.name);
-        let body = document.createTextNode(item.body); 
+        let timeBlock = doc.createElement('div');
+        let nameBlock = doc.createElement('div');
+        let bodyBlock = doc.createElement('div');
+        let info = doc.createElement('div');
+        let time = doc.createTextNode(timeConverter(item.time))
+        let name = doc.createTextNode(item.name);
+        let body = doc.createTextNode(item.body); 
 
         timeBlock.appendChild(time);
         timeBlock.classList.add('timeBlock');        
@@ -405,14 +409,14 @@ function showComments (){
         wrapper.appendChild(info);
         wrapper.appendChild(bodyBlock);
         wrapper.classList.add("containerForComments");
-        let del = document.createElement('div');
+        let del = doc.createElement('div');
         bodyBlock.appendChild(del);
         del.classList.add('del');
         del.onclick = function(){
             info.parentNode.removeChild(info);
             bodyBlock.parentNode.removeChild(bodyBlock);
             comments.shift();}
-            document.querySelector('.admin');
+            doc.querySelector('.admin');
         });      
 
     commentField.appendChild(wrapper);

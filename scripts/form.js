@@ -1,6 +1,6 @@
 // show max length
 let comment = document.querySelector('#comment');
-
+let subject = document.querySelector('.subject');
 comment.oninput = comment.onkeyp = comment.onchange = function() {
   let len = this.value.length;
   if (len > this.max) {
@@ -9,3 +9,4 @@ comment.oninput = comment.onkeyp = comment.onchange = function() {
   }
   document.getElementById('counter').innerHTML = (+this.max - len) + '/200';
 };
+

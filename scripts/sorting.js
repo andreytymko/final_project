@@ -12,7 +12,6 @@ document.querySelector('#time').onclick = function(){
     mySortDesc('data-time');
 }
 
-
 let main  = document.querySelector('.main-price-block');
 // ------increase-----
 function mySort(sortType){

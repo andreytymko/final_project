@@ -107,3 +107,113 @@
   .mobileBackImg{
     display: none;
 }
+  /*---slider----  */
+  .slider {
+    background:white;
+    height:720px;
+    width:100%;
+    background-size: cover;
+    -webkit-transition:2s all linear;
+    transition: 2s all linear;
+    
+  }
+ 
+  .slider .btnLeft {
+    position:absolute;
+    top:350px;
+      border-top:15px solid transparent;
+      border-bottom:15px solid transparent; 
+      border-right:15px solid white;
+    opacity:.3;
+    left:20px;
+    transition:all 1s ease-in-out;
+    -moz-transition:all 1s ease-in-out;
+    -webkit-transition:all 1s ease-in-out;
+  }
+  
+  .slider .btnLeft:before {
+    content:"";
+    position:absolute;
+    background:rgba(200,200,200,.4);
+    height:50px;
+    width:50px;
+    border-radius:100%;
+    margin-left:-15px;
+    margin-top:-25px;
+    transition:all 1s ease-in-out;
+    -moz-transition:all 1s ease-in-out;
+    -webkit-transition:all 1s ease-in-out;
+  }
+  
+  .slider .btnLeft:hover {
+    opacity:1;
+    cursor:pointer;
+  }
+  
+  .sliderImages{
+      height: 600px;
+  }
+  
+  .slider .btnRight {
+    position:absolute;
+    top:350px;
+      border-top:15px solid transparent;
+      border-bottom:15px solid transparent;
+      border-left:15px solid white;
+    opacity:.5;
+    right:20px;
+    transition:all 1s ease-in-out;
+    -moz-transition:all 1s ease-in-out;
+    -webkit-transition:all 1s ease-in-out;
+  }
+  
+  .slider .btnRight:before {
+    content:"";
+    position:absolute;
+    background:rgba(200,200,200,.4);
+    height:50px;
+    width:50px;
+    border-radius:100%;
+    margin-left:-35px;
+    margin-top:-25px;
+    transition:all 1s ease-in-out;
+    -moz-transition:all 1s ease-in-out;
+    -webkit-transition:all 1s ease-in-out;
+  }
+  
+  .slider .btnRight:hover {
+    opacity:1;
+    cursor:pointer;
+  }
+  
+ 
+.hidden {
+    display: none;
+  }
+  /* ---slider text---- */
+.headertext{
+    position: absolute;
+    top: 200px;
+    left:23%;
+    color: rgba(255, 255, 255, 0.3);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    
+    text-align: center;
+    
+  }
+  .headertext h1{
+      padding-bottom: 10px;
+      font-size: 7em;
+  }
+  .headertext p{
+    font-size: 1em;
+  }
+  .mobileBackImg{
+    display: none;
+}

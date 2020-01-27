@@ -1,15 +1,22 @@
 /* -----posts ----- */
 .closeIcon{
   width: 100%;
+  display: -ms-grid;
   display: grid;
-  justify-content: center
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center
 }
 .postItem {
   font-family: 'Open Sans', Arial, sans-serif;
   position: relative;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: auto;
-  justify-content: center;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-bottom: 10px;
   overflow: hidden;
   margin: 40px 1%;
@@ -46,6 +53,7 @@
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
   -webkit-transition: all 0.3s ease;
+  -webkit-transition: all .4s ease;
   transition: all .4s ease;
 }
 
@@ -112,8 +120,12 @@
   height: 50px;
   padding-top: 20px;
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   }
   .pagination1 li
   {
@@ -130,21 +142,29 @@
 /* ----  comments---- */
 /* ----comments input---- */
 .commentsInput{
+    display: -ms-grid;
     display: grid;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .block-name,
 .block-body{
+    display: -ms-grid;
     display: grid;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 350px;
 
 }
 .block-name label,
 .block-body label,
 .block-add{
-    justify-content: left;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
     text-align: left;
     
 
@@ -209,13 +229,20 @@
 }
 .containerForComments{
     max-width: 100%;
+    display: -ms-grid;
     display: grid;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .infoBlock{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .timeBlock{

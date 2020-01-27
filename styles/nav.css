@@ -19,8 +19,10 @@ a{
     background:rgba(31, 39, 46, 0.5);
     width:100%;
     position:fixed;
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: auto auto;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
     z-index: 1;
 }
 /* .header:after{
@@ -74,13 +76,17 @@ a{
     padding:0 0 0 30px;
 }
 nav{
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 5fr 1fr;
+    -ms-grid-columns: 5fr 1fr;
+        grid-template-columns: 5fr 1fr;
 
 }
 nav>ul{
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     width: auto;
 
     /* justify-content: center; */
@@ -172,6 +178,7 @@ nav li li a:hover{
     margin-bottom:5px;
     display:block;
     -webkit-transition:all .2s;
+    -webkit-transition:all .1s;
     transition:all .1s;
 }
 #error1,
@@ -224,9 +231,12 @@ nav li li a:hover{
 
       }
     nav>ul{
+        display: -ms-grid;
         display: grid;
-        grid-template-rows: auto auto auto auto auto ;
-        grid-template-columns: 1fr ;
+        -ms-grid-rows: auto auto auto auto auto ;
+            grid-template-rows: auto auto auto auto auto ;
+        -ms-grid-columns: 1fr ;
+            grid-template-columns: 1fr ;
 
     }
     
@@ -265,7 +275,8 @@ nav li li a:hover{
         display:block;
       }
     .header{
-          grid-template-columns: auto;
+          -ms-grid-columns: auto;
+              grid-template-columns: auto;
       }
     .header nav ul ul{
         display:block;
@@ -293,38 +304,38 @@ nav li li a:hover{
         content: " -";
 
     }
-      .search{
-          width: 100%;
-          position: absolute;
-          top: 50px;
-          left: -150px;
-          /* text-align: center; */
-          z-index: 1;
+    .search{
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: -150px;
+        /* text-align: center; */
+        z-index: 1;
           
-      }
-      .place_for_search{
-          width: 250px;
-          position: relative;
-          left: 150px;
-      }
-      .button_for_turn_back{
-          width: 20px;
-          height: 20px;
-          position: relative;
-          left: 110px;
-          bottom: 0px;
-      }
-      .button_for_search{
-          display: none;
-          width: 30px;
-          background-color: rgb(255, 255, 255);
-          border-radius: 20px;
-          background-position: center;
-          position: absolute;
-          left: 360px;
-          top: 36px;
-          
-      }
+    }
+    .place_for_search{
+        width: 250px;
+        position: relative;
+        left: 150px;
+    }
+    .button_for_turn_back{
+        width: 20px;
+        height: 20px;
+        position: relative;
+        left: 110px;
+        bottom: 0px;
+    }
+    .button_for_search{
+        display: none;
+        width: 30px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        background-position: center;
+        position: absolute;
+        left: 360px;
+        top: 36px;
+        
+    }
      
   
-  }
+}
