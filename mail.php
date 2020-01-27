@@ -12,5 +12,9 @@ $address = "andreyka.tima@gmail.com";
 $email = "hhhandrej69@gmail.com";
 $mes =  " Имя: $name \nНомер телефона: $tel \nТема: $sub \nВыбранная дата:  $date \nТекст:  $body";
 $send = mail ($address,$sub,$mes,"Content-type:text/plain; charset = UTF-8\r\nFrom:$email");
-}else{}
+
+}
+else
+{
+}
 ?>

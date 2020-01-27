@@ -1,13 +1,14 @@
 
 // -------mobile navigation(burger menu)--------
-display = document.querySelector('nav').style.display;
 document.querySelector('#menu-icon').onclick = function(){
+	display = document.querySelector('nav').style.display;
 	if(display == 'none'){
-		this.classList.add('active');
 		document.querySelector('nav').style.display = 'block';
+		document.querySelector('nav').style.transition = 'all 1s linear';
+		this.classList.add('active');
 	}else{
-		this.classList.remove('active');
 		document.querySelector('nav').style.display = 'none';
+		this.classList.remove('active');
 
 	}
 }

@@ -45,10 +45,7 @@
         left: 100px;
     }
     .inline{
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        flex-direction: column;
     }
    
 
@@ -56,13 +53,9 @@
         text-align: center;
     }
     .contacts{
-        -ms-grid-columns: auto;
-            grid-template-columns: auto;
-        -ms-grid-rows: auto auto;
-            grid-template-rows: auto auto;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        justify-content: center;
         margin: 30px 0;
     }
     .form{
@@ -80,16 +73,24 @@
 }
 
 
-
+@media all and (min-width:1501px){
+    .service{
+        width: 250px;
+        height: 200px;
+    }
+}
 @media all and (max-width:1500px){
     /* MAIN */
     .main_service{
-        -ms-grid-columns: auto auto;
-            grid-template-columns: auto auto;
+        grid-template-columns: auto auto auto;
     }
 }
 @media all and (max-width:1400px){
     /* MAIN */
+    .service{
+        width: 250px;
+        height: 200px;
+    }
     .adv{
         width: 300px;
         height: 300px;
@@ -110,9 +111,9 @@
 }
 @media all and (max-width:1200px){
     /* MAIN */
+
     .aboutMe{
-        -ms-grid-columns: auto;
-            grid-template-columns: auto;
+        grid-template-columns: auto;
     }
     .listOfSkills{
         text-align: justify;
@@ -120,9 +121,16 @@
 }
 @media all and (max-width:960px){
     /* MAIN */
+    .main_service{
+        grid-template-columns: auto auto ;
+    }
     .mainInfo{
         position: relative;
         bottom: 140px;
+    }
+    .service{
+        width: 250px;
+        height: 250px;
     }
     .main-head-photo{
         display: block;
@@ -133,8 +141,7 @@
     }
     
     .whyme{
-        -ms-grid-columns: auto ;
-            grid-template-columns: auto ;
+        grid-template-columns: auto ;
     }
     .adv{
         width: 280px;
@@ -182,6 +189,7 @@
 
 @media all and (max-width:546px){
     /* MAIN */
+
     .mainInfo{
         position: relative;
         bottom: 200px;
@@ -199,12 +207,16 @@
 }
 @media all and (max-width:450px){
     /* MAIN */
+    .main_service{
+        grid-template-columns: auto  ;
+    }
+
     .myphoto img {
         width: 250px;
     }
     .service{
-        width: 140px;
-        height: 90px;
+        width: 250px;
+        height: 250px;
     }
     
     .logo a{
@@ -212,6 +224,155 @@
     }
 }
 
+ 
+@media only screen and (min-width: 1001px) {
+    /* NAV */
+    nav{
+        display:block;
+
+      }
+      
+  }
+
+@media only screen and (max-width: 1180px) {
+        /* NAV */
+    nav >ul>li >a{
+      padding:35px 15px;
+
+    }
+   
+    
+
+}
+
+
+@media only screen and (max-width: 1000px) {
+        /* NAV */
+    .header{
+        background:rgba(31, 39, 46, 0.762);
+
+
+    }
+    nav{
+        display:none;
+        width:100%;
+        clear:both;
+        height:500px;
+        overflow-y:scroll;
+        text-align: center;
+
+
+
+      }
+    nav>ul{
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-rows: auto auto auto auto auto ;
+            grid-template-rows: auto auto auto auto auto ;
+        -ms-grid-columns: 1fr ;
+            grid-template-columns: 1fr ;
+
+    }
+    
+    #menu-icon{
+        display:inline;
+        top:45px;
+        cursor:pointer;
+
+  }
+    #menu-icon.active .first{
+        transform:rotate(45deg);
+        -webkit-transform:rotate(45deg);
+        margin-top:10px;
+
+      }
+    #menu-icon.active .second{
+        transform:rotate(135deg);
+        -webkit-transform:rotate(135deg);
+        position:relative;
+        top:-9px;
+      }
+    #menu-icon.active .third{
+        display:none;
+      }
+    
+    
+    nav{
+        padding:50px;
+        padding-top: 40px;
+
+      }
+  
+    nav ul li a{
+        /* float:none; */
+        padding:8px;
+        display:block;
+      }
+    .header{
+          -ms-grid-columns: auto;
+              grid-template-columns: auto;
+      }
+    .header nav ul ul{
+        display:block;
+        position:static;
+        background:none;
+        border:none;
+        padding:0;
+
+      }
+    .header nav a{
+        color:#fff;
+        padding:8px;
+      }
+    .header nav a:hover{
+        background:#fff;
+        color:#333;
+        border-radius:3px;
+
+      
+      }
+    .header nav ul li li a:before{
+        content:"- ";
+      }
+    .header nav ul li li a::after{
+        content: " -";
+
+    }
+    .search{
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: -150px;
+        /* text-align: center; */
+        z-index: 1;
+          
+    }
+    .place_for_search{
+        width: 250px;
+        position: relative;
+        left: 150px;
+    }
+    .button_for_turn_back{
+        width: 20px;
+        height: 20px;
+        position: relative;
+        left: 110px;
+        bottom: 0px;
+    }
+    .button_for_search{
+        display: none;
+        width: 30px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        background-position: center;
+        position: absolute;
+        left: 360px;
+        top: 36px;
+        
+    }
+     
+  
+}
 
 
 @media all and (max-width:500px){
@@ -250,8 +411,7 @@
   @media all and (max-width:1150px){
     /* PRICE */
     .main-price-block{
-        -ms-grid-columns:auto auto ;
-            grid-template-columns:auto auto ;
+        grid-template-columns:auto auto ;
 
     }
 
@@ -259,8 +419,7 @@
 @media all and (max-width:670px){
         /* PRICE */
     .main-price-block{
-        -ms-grid-columns:auto  ;
-            grid-template-columns:auto  ;
+        grid-template-columns:auto  ;
 
     }
 
@@ -306,10 +465,8 @@
         width: 450px;
         height: 700px;
         background-color:  rgba(227, 227, 228, 0.721);
-        display: -ms-grid;
         display: grid;
-        -ms-grid-columns: 1fr;
-            grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
         border-radius: 10px;
            
     }
@@ -324,7 +481,6 @@
 
     }
     .hidden-item{
-        display: -ms-grid;
         display: grid;
     }
     .visible-item{
@@ -346,9 +502,7 @@
         width: 280px;
         height: 200px;
         position: initial;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        justify-content: center;
         padding-top: 20px;
         
     }
